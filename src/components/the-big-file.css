@@ -579,10 +579,14 @@
         width: 200px;
         height: auto;
     }
+
+    .main-container {
+      padding: 20px;
+    }
 }
 
 /* This is for  .nav-container and .nav-links*/
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .nav-container {
         width: 100%;
         padding: 8px;
@@ -593,16 +597,43 @@
     }
 
     .main-container {
+      margin: 10px;
         padding: 20px;
         top: 0;
         transform: translateY(-50px);
     }
     .main-container h2 {
-        font-size: 28px;
+        font-size: 24px;
         text-align: center;
     }
     .main-container p {
         font-size: 15px;
         text-align: center;
     }
+}
+
+@media screen and (max-width: 370) {
+  .nav-container {
+      width: 100%;
+      padding: 8px;
+  }
+  .nav-links {
+      gap: 10px;
+      font-size: 12px;
+  }
+
+  .main-container {
+    margin: 10px;
+      padding: 25px;
+      top: 0;
+      transform: translateY(-50px);
+  }
+  .main-container h2 {
+      font-size: 15px;
+      text-align: center;
+  }
+  .main-container p {
+      font-size: 10px;
+      text-align: center;
+  }
 }
