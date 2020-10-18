@@ -389,28 +389,28 @@ const FlowerBloom = () => {
       stagger: 0.25,
       scale: 0.2,
       opacity: 0,
-      delay: 6.6
+      delay: 5.6
     })
     gsap.from(introAnimation44.current, {
       duration: 8, ease: "power3.out",
       stagger: 0.25,
       scale: 0.2,
       opacity: 0,
-      delay: 6.8
+      delay: 5.8
     })
     gsap.from(introAnimation45.current, {
       duration: 8, ease: "power3.out",
       stagger: 0.25,
       scale: 0.2,
       opacity: 0,
-      delay: 7
+      delay: 5
     })
     gsap.from(introAnimation46.current, {
       duration: 8, ease: "power3.out",
       stagger: 0.25,
       scale: 0.2,
       opacity: 0,
-      delay: 7.2
+      delay: 5.2
     })
     gsap.from(introAnimation47.current, {
       duration: 8, ease: "power3.out",

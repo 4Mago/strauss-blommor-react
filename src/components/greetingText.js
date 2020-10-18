@@ -27,7 +27,7 @@ window.addEventListener('scroll', scrollProgress)
         <div>
             <div className='greeting-container'>
               <div className='greeting-background'>
-  <div className='greeting-text' id='h1' data-speed='1.5'>
+  <div className='greeting-text' id='h1' data-speed='1'>
 
 
   <div className='parallax-title'><h2> Skicka blommor med oss!</h2> </div>
