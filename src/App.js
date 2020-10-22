@@ -8,11 +8,13 @@ import Begravning from "./pages/begravning.component"
 import Buketter from "./pages/buketter.component"
 import Kontakt from "./pages/kontakt.component"
 
+
 // let goingUp = useRef(null)
 // let GoingDown2 = useRef(null)
 
 const App = () => (
     <div>
+   
       <Header />
         <Route path={'/'} exact >
           <Home />
