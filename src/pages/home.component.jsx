@@ -1,7 +1,6 @@
 import React from 'react'
 import '../components/the-big-file.css'
 import '../components/flowerBloom'
-
 import FlowerBloom from '../components/flowerBloom'
 import GreetingText from '../components/greetingText'
 import MainText from "../components/MainText"
