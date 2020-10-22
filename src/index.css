@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.petal {
+	transform: scale(0, 0);
+	transform-origin: 50% 50%;
+  opacity: 0;
+}
+
+.petal:hover {
+  fill: #27342083;
+  transition: all ease-out 0.5s;
+  scale: (0,0)
+}

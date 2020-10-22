@@ -1,6 +1,9 @@
 import React from 'react'
 
 const goingDown = () => {
+
+    
+
     return (
         <div>
                 <div id='going-down' className='right-text outmost-left-text'>

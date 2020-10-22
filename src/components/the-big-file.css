@@ -56,6 +56,7 @@
     stroke: #273420;
     stroke-width: 1.3px;
     stroke-linejoin: round;
+    fill: #fdd5d6;
 }
 
 .flower {
@@ -69,8 +70,8 @@
 .main-outer {
     width: 90%;
     height: 100%;
-    background: center / contain no-repeat url('/images/strauss-bakgrund.jpg');
-    background-size: cover;
+    background: center / cover no-repeat url('/images/strauss-bakgrudn.png');
+    object-fit: cover;
 }
 
 .company-logo {
@@ -107,6 +108,7 @@
     stroke-width: 1px;
 }
 
+
 .right-text {
     display: flex;
     height: 100%;
@@ -126,25 +128,25 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 10vh;
+    margin-bottom: 20vh;
 }
 
 .main-container {
     display: flex;
     justify-content: flex-start;
-    padding: 25px;
+    padding: 0px 25px 25px 25px;
 }
 
 .main-text h2{
     text-align: left;
     left: 0;
     color: #ffffff;
-    font-size: 36px;
+    font-size: 66px;
 }
 .main-text p{
     text-align: left;
     left: 0;
-    font-size: 20px;
+    font-size: 22px;
     color: white;
 }
 
@@ -200,6 +202,7 @@
   height: auto;  
   bottom: -5px;
     fill: #FFEBEC;
+  background-image: linear-gradient(white, #273420)
 }
 
 /****************************************************           ~            INDEX.js -> picture-preview             ~              ****************************************************/
@@ -278,213 +281,6 @@
     height: 15vh;
     width: 100%;
 }
-
-/****************************************************                      ~            petal hover             ~                           ****************************************************/
-
-#toggle1.petal.p1:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle2.petal.p2:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle3.petal.p3:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle4.petal.p4:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle5.petal.p5:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle6.petal.p6:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle7.petal.p7:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle8.petal.p8:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle9.petal.p9:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle10.petal.p10:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle11.petal.p11:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle12.petal.p12:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle13.petal.p13:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle14.petal.p14:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle15.petal.p15:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle16.petal.p16:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle17.petal.p17:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle18.petal.p18:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle19.petal.p19:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle20.petal.p20:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle21.petal.p21:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle22.petal.p22:hover {
-    fill: #27342083;
-    transition: all ease 0.5s;
-  }
-#toggle23.petal.p23:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle24.petal.p24:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle25.petal.p25:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle26.petal.p26:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle27.petal.p27:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle28.petal.p28:hover {
-    fill: #27342083;
-    transition: all ease 0.4s;
-  }
-#toggle29.petal.p29:hover {
-    fill: #27342083;
-    transition: all ease 0.4s;
-  }
-#toggle30.petal.p30:hover {
-    fill: #27342083;
-    transition: all ease 0.4s;
-  }
-#toggle31.petal.p31:hover {
-    fill: #27342083;
-    transition: all ease 0.4s;
-  }
-#toggle32.petal.p32:hover {
-    fill: #27342083;
-    transition: all ease 0.4s;
-  }
-#toggle33.petal.p33:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle34.petal.p34:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle35.petal.p35:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle36.petal.p36:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle37.petal.p37:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle38.petal.p38:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle39.petal.p39:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle40.petal.p40:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle41.petal.p41:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle42.petal.p42:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle43.petal.p43:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle44.petal.p44:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle45.petal.p45:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle46.petal.p46:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle47.petal.p47:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle48.petal.p48:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle49.petal.p49:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle50.petal.p50:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
-#toggle51.petal.p51:hover {
-    fill: #27342083;
-    transition: all ease 0.3s;
-  }
 /****************************************************                      ~            @keyframes             ~                           ****************************************************/
 
 
@@ -540,8 +336,15 @@
     .greeting-text {
         width: 100%;
         text-indent: 0 0;
-
     }
+    .main-container h2 {
+      font-size: 36px;
+      text-align: center;
+  }
+  .main-container p {
+      font-size: 18px;
+      text-align: center;
+  }
 }
 @media screen and (max-width: 800px) {
     .wrap {
@@ -574,12 +377,7 @@
         align-items: center;
         width: 100%;
     }
-    .wrap {
-        width: 270px;
-        height: auto;
-    }
-
-    }
+}
     
 
 
