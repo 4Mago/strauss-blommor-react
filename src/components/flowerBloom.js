@@ -3,11 +3,9 @@ import './the-big-file.css'
 const FlowerBloom = () => {
 	useEffect(() => {
 		// nodelist
-
 		const petals = document.getElementsByClassName('petal')
 
 		// pga nodelist- for each
-
 		Array.from(petals).forEach(petal => {
 			// generera nytt value
 			const value = Math.random() * 3 + 0.2
