@@ -11,6 +11,7 @@ import GoingDown from '../components/parallax/goingDown'
 import HeaderImage from '../components/header-image.component'
 import SliderShow from '../components/SliderShow'
 import { HomeContext } from '../store/home-context.component'
+import OpenHours from '../components/openHours'
 
 const Home = () => {
 	const { home } = useContext(HomeContext)
@@ -33,7 +34,7 @@ const Home = () => {
 
 			<SliderShow />
 			<GreetingText></GreetingText>
-
+			<OpenHours />
 			<div className='vertical-space-inbetween1'></div>
 			<div className='vertical-space-inbetween2'></div>
 			<div className='vertical-space-inbetween3'></div>
