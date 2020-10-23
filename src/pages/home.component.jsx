@@ -8,7 +8,8 @@ import GoingUp from "../components/parallax/goingUp"
 import GoingDown2 from "../components/parallax/GoingDown2"
 import GoingUp2 from "../components/parallax/goingUp2"
 import GoingDown from "../components/parallax/goingDown"
-import SlopeFigure from "../components/slopeFigure"
+import HeaderImage from '../components/header-image.component'
+import SliderShow from '../components/SliderShow'
 
 const Home = () => {
     return (
@@ -16,25 +17,21 @@ const Home = () => {
            
   <div className='outer-container'>
   <GoingDown />
- <div className='main-outer'>
-      <div className='main-inner'>
+<HeaderImage>
+          <div className='main-inner'>
       <GoingUp />
         <div id='' className='middle-part'>
         {/* <div className='logo-box'><img className='logo' alt='logo' src='/images/strauss-logo.png'></img></div> */}
         <MainText></MainText> <FlowerBloom/>
 </div>
 <GoingUp2 />
-            </div></div>
+            </div></HeaderImage>
 <GoingDown2 />
 
 </div>
 
-<div><div className='vertical-space-inbetween'></div>
-<div className='POWR-blocker-container'><div className="powr-instagram-feed" id="0ea62b8c_1602840170"></div><div className='POWR-blocker'></div>
-</div>
-</div>
+<SliderShow />
 <GreetingText></GreetingText>
-<SlopeFigure />
        
 
     <div className='vertical-space-inbetween1'></div>

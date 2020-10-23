@@ -14,7 +14,6 @@ import Kontakt from "./pages/kontakt.component"
 
 const App = () => (
     <div>
-   
       <Header />
         <Route path={'/'} exact >
           <Home />

@@ -1,5 +1,14 @@
 import React from 'react'
 import './the-big-file.css'
+import styled from 'styled-components'
+
+const Container = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+`
 
 function GreetingText() {
 
@@ -25,7 +34,7 @@ window.addEventListener('scroll', scrollProgress)
 
     return (
         <div>
-            <div className='greeting-container'>
+            <Container>
               <div className='greeting-background'>
   <div className='greeting-text' id='h1' data-speed='1'>
 
@@ -37,7 +46,7 @@ window.addEventListener('scroll', scrollProgress)
   </br>Strauss Blommor ligger på Rosenlundsgatan 32 C på Södermalm i <br></br> Stockholm (pendel Södra station/t-bana Mariatorget). </div></p>
   </div>
   </div>
-     </div>
+     </Container>
         </div>
     )
 }

@@ -152,14 +152,6 @@
 }
 
 /****************************************************           ~            INDEX.js -> GREETING CONTAINER            ~                ****************************************************/
-.greeting-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 80%;
-    /* background: center / contain no-repeat url('/images/strauss-bakgrund.jpg'); */
-    width: 100%;
-}
 
 .POWR-blocker {
     height: 65px;
@@ -185,22 +177,7 @@
     -webkit-text-stroke: 0.3px black;
 }
 
-.slope-figure-main svg {
-    background: transparent;
-    position: inline;
-    left: 0;
-    bottom: 0;
-    fill: #FFEBEC;
-}
 
-.slope-figure-main {
-    width: 100%;
-    height: 100%;
-    height: auto;
-    bottom: -5px;
-    fill: #FFEBEC;
-    background-image: linear-gradient(white, #273420)
-}
 
 /****************************************************           ~            INDEX.js -> picture-preview             ~              ****************************************************/
 
@@ -277,11 +254,7 @@
     background: #ffebec75;
 }
 
-.main-footer {
-    background: #FFEBEC;
-    height: 15vh;
-    width: 100%;
-}
+
 
 /****************************************************                      ~            @keyframes             ~                           ****************************************************/
 
@@ -337,22 +310,6 @@
 
 /* This is for .slope-figure-main*/
 
-@media screen and (max-width: 960px) {
-    .greeting-text {
-        width: 100%;
-        text-indent: 0 0;
-    }
-
-    .main-container h2 {
-        font-size: 36px;
-        text-align: center;
-    }
-
-    .main-container p {
-        font-size: 18px;
-        text-align: center;
-    }
-}
 
 @media screen and (max-width: 800px) {
     .wrap {
