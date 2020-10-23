@@ -7,7 +7,7 @@ import Footer from './components/footer.component'
 import Begravning from './pages/begravning.component'
 import Buketter from './pages/buketter.component'
 import Kontakt from './pages/kontakt.component'
-import HomeContextProvider from './store/homeContext.component'
+import HomeContextProvider from './store/home-context.component'
 
 // let goingUp = useRef(null)
 // let GoingDown2 = useRef(null)

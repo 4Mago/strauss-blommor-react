@@ -10,7 +10,7 @@ import GoingUp2 from '../components/parallax/goingUp2'
 import GoingDown from '../components/parallax/goingDown'
 import HeaderImage from '../components/header-image.component'
 import SliderShow from '../components/SliderShow'
-import { HomeContext } from '../../store/HomeContext'
+import { HomeContext } from '../store/home-context.component'
 
 const Home = () => {
 	const { home } = useContext(HomeContext)
