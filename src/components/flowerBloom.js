@@ -1,5 +1,45 @@
 import React, { useEffect } from 'react'
 import './the-big-file.css'
+import styled from 'styled-components'
+
+const Container = styled.div`
+@media screen and (max-width: 700px) {
+	order: -1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+`
+
+const Wrap = styled.div`
+padding: 0px 0;
+width: 475px;
+height: 100%;
+background: transparent;
+
+@media screen and (max-width: 1300px) {
+        width: 325px;
+        height: auto;
+    }
+
+
+@media screen and (max-width: 960px) {
+        width: 300px;
+        height: auto;
+}
+
+@media screen and (max-width: 800px) {
+		width: 275px;
+        height: auto;
+}
+
+@media screen and (max-width: 700px) {
+		width: 200px;
+		height: auto;
+	}
+	`
+
 const FlowerBloom = () => {
 	useEffect(() => {
 		// nodelist
@@ -17,8 +57,8 @@ const FlowerBloom = () => {
 	}, [])
 
 	return (
-		<div className='wrap-container'>
-			<div className='wrap'>
+		<Container>
+			<Wrap>
 				<svg
 					version='1.1'
 					id='layer_1'
@@ -408,8 +448,8 @@ const FlowerBloom = () => {
 						/>
 					</g>
 				</svg>
-			</div>
-		</div>
+			</Wrap>
+		</Container>
 	)
 }
 
