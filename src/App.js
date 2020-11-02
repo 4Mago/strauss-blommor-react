@@ -18,7 +18,7 @@ const App = () => (
         <Route path={'/'} exact >
           <Home />
         </Route>
-        <Route path={'/brollop'}>
+        <Route path={'/bröllop'}>
           <Brollop />
         </Route>
         <Route path={'/begravning'}>
