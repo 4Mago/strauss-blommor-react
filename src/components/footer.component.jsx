@@ -7,7 +7,8 @@ display: flex;
 justify-content: space-between;
 height: 100px;
 bottom: 0;
-background: #ffebecd7;
+background: #273420;
+color: #ffffff;
 }
 `
 
@@ -16,8 +17,9 @@ display: flex;
 justify-content: flex-start;
 padding: 15px;
 height: 150px;
-background: #ffebecd7;
+background: #273420;
 flex-direction: column;
+color: #ffffff;
 `
 
 const Img = styled.img`
@@ -51,19 +53,27 @@ const Footer = () => {
       <div>
   <Container>
     <Left>
-    <h3>Öppettider</h3>
+    <h4>Öppettider</h4>
         <br/>  Måndag - Fredag 10.00 - 18.30
         <br/>  Lördag 10.00 - 16.00
     </Left>
     <CenterLeft>
-      <h3>Navigation</h3>
+      <h4>Navigation</h4>
+      Buketter
+      <br />Begravning
+      <br />Bröllop
+      <br />Kontakt
     </CenterLeft>
     <div className='middle'></div>
     <CenterRight>
-      <h3>Företag</h3>
+      <h4>Företagstjänster</h4>
+      Beställningar
+      <br />Event
+      <br />
     </CenterRight>
     <Right>
-    <h3>Strauss Blommor</h3> 
+    <h4>Adress</h4>
+    Strauss Blommor
     <br />Rosenlundsgatan 32 C
     <br />118 53 Stockholm
     </Right>
