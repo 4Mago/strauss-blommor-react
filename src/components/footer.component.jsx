@@ -12,6 +12,10 @@ const NavContainer = styled.div`
 display: flex;
 justify-content: space-between;
 height: auto;
+
+@media screen and (max-width: 700px) {
+	display: flex;
+	flex-direction: column;
 }
 `
 

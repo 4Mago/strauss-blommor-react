@@ -8,6 +8,11 @@ const Container = styled.div`
     justify-content: space-around;
     align-items: center;
     font-family: poppins;
+
+    @media screen and (max-width: 700px) {
+        display: flex;
+        flex-direction: column;
+    }
     `
 const ImageContainer = styled.div`
     display: flex;
