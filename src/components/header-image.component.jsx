@@ -13,8 +13,7 @@ const Container = styled.div`
 const HeaderImage = (props) => {
     return (
         <Container>
-            {props.children}
-            
+            {props.children}    
         </Container>
     )
 }

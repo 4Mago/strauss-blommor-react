@@ -7,6 +7,7 @@ const Container = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-family: poppins;
     `
 const ImageContainer = styled.div`
     display: flex;

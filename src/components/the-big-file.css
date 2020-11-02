@@ -10,7 +10,9 @@
     text-decoration: none;
     color: black;
 }
-
+#powrIframeLoader {
+    height: 0;
+}
 
 /****************************************************                      ~            INDEX.js             ~                           ****************************************************/
 .flower path {

@@ -3,22 +3,24 @@ import styled from 'styled-components'
 
 const Container = styled.div`
 clear: both;
-display: grid;
+display: flex;
+justify-content: space-between;
 height: 100px;
-grid-template-columns: 3fr 6fr 3fr;
 bottom: 0;
 background: #ffebecd7;
 }
 `
 
 const Left = styled.text`
-  padding: 15px 15px px 15px;
+  padding: 15px;
   text-align: left;
+  font-family: poppins;
 `
 
 const Right = styled.text`
   padding: 20px;
   text-align: right;
+  font-family: poppins;
 `
 
 const Footer = () => {
