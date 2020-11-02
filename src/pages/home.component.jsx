@@ -2,7 +2,6 @@ import React from 'react'
 import '../components/the-big-file.css'
 import '../components/flowerBloom'
 import FlowerBloom from '../components/flowerBloom'
-import GreetingText from '../components/greetingText'
 import MainText from '../components/MainText'
 import GoingUp from '../components/parallax/goingUp'
 import GoingDown2 from '../components/parallax/GoingDown2'
@@ -44,9 +43,8 @@ const Home = () => {
 			</OuterContainer>
 
 			<SliderShow />
-			<GoogleMaps />
 			<OpenHours />
-			<GreetingText></GreetingText>
+			<GoogleMaps />
 			<div className='vertical-space-inbetween1'></div>
 			<div className='vertical-space-inbetween2'></div>
 			<div className='vertical-space-inbetween3'></div>

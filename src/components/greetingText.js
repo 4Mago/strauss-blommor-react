@@ -9,6 +9,12 @@ const Container = styled.div`
   align-items: center;
   height: 80%;
   width: 100%;
+  text-indent: 4em 4em;
+  grid-template-rows: 1fr;
+  align-items: center;
+  text-align: center;
+  color: #EEE1E1;
+  font-size: 20px;
 `
 
 function GreetingText() {

@@ -11,8 +11,8 @@ const Container = styled.div`
     `
 const ImageContainer = styled.div`
     display: flex;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     flex-direction: column;
     justify-items: center;
     align-items: center;
@@ -32,7 +32,7 @@ const OpenHours = () => {
         <Container>
         <ImageContainer>
         <Icon src="/images/henock_inkoner_05.png" alt=""></Icon>
-        <span>  Open Hours </span>
+        <span>  Öppettider </span>
         <br/>  Måndag - Fredag 10.00 - 18.30
         <br/>  Lördag 10.00 - 16.00
         </ImageContainer>
@@ -40,13 +40,12 @@ const OpenHours = () => {
         <Icon src="/images/henock_inkoner_04.png" alt=""></Icon>
         <span class="page__info--title">Vår Butik </span>
         Strauss Blommor ligger på Södermalm i Stockholm <br/> (Södra station uppgång Rosenlundsgatan).
-        <br />  Strauss Blommor, Rosenlundsgatan 32 C, 118 53 Stockholm
         </ImageContainer>
         <ImageContainer>
         <Icon src="/images/henock_inkoner_02.png" alt=""></Icon>
         <span class="page__info--title">Kontakt</span>
-        Du kan nå oss via <a href='mailto:info@straussblommor.se'>Email</a>
-        Eller ringa på <a href='tel:08-209840'>08-20 98 40</a>
+       <p>Du kan nå oss via <a href='mailto:info@straussblommor.se'>E-post</a><br />
+        Eller ringa på <a href='tel:08-209840'>08-20 98 40</a></p>
         </ImageContainer>
         </Container>
 )
