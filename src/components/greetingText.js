@@ -5,6 +5,7 @@ import styled from 'styled-components'
 const Container = styled.div`
   display: flex;
   justify-content: flex-end;
+  margin-top: 200px;
   align-items: center;
   height: 80%;
   width: 100%;
@@ -39,9 +40,9 @@ window.addEventListener('scroll', scrollProgress)
   <div className='greeting-text' id='h1' data-speed='1'>
 
 
-  <div className='parallax-title'><h2> Skicka blommor med oss!</h2> </div>
+  <div className='parallax-titl'><h2> Skicka blommor med oss!</h2> </div>
 
-  <p><div className='parallax-title'>Vi älskar gröna växter (både traditionella och lite annorlunda), <br></br> vilda säsongsbuketter och lite godbitar inom present och inredning. 
+  <p><div className='parallax-titl'>Vi älskar gröna växter (både traditionella och lite annorlunda), <br></br> vilda säsongsbuketter och lite godbitar inom present och inredning. 
   <br>
   </br>Strauss Blommor ligger på Rosenlundsgatan 32 C på Södermalm i <br></br> Stockholm (pendel Södra station/t-bana Mariatorget). </div></p>
   </div>
