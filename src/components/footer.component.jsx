@@ -76,9 +76,9 @@ const Footer = () => {
 			<Socials>
 				<h2>Socials</h2>
 				<div>
-					<Img alt='hej' src='/images/facebook.png'></Img>
-					<Img alt='hej' src='/images/instagram.png'></Img>
-					<Img alt='hej' src='/images/linkedin.png'></Img>
+					 <a href='https://www.facebook.com/straussblommor'> <Img alt='hej' src='/images/facebook.png'></Img> </a>
+					 <a href='https://www.instagram.com/straussblommor/?hl=sv'><Img alt='hej' src='/images/instagram.png'></Img> </a>
+					{/* <Img alt='hej' src='/images/linkedin.png'></Img> */}
 				</div>
 			</Socials>
 		</Container>
