@@ -95,17 +95,7 @@
 
 /****************************************************           ~            INDEX.js -> GREETING CONTAINER            ~                ****************************************************/
 
-.greeting-text {
-    display: grid;
-    margin: 1em;
-    text-indent: 4em 4em;
-    grid-template-rows: 1fr;
-    align-items: center;
-    text-align: center;
-    color: #EEE1E1;
-    font-size: 20px;
-    -webkit-text-stroke: 0.3px black;
-}
+
 
 
 

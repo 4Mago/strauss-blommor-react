@@ -6,11 +6,11 @@ const Container = styled.div`
 `
 
 const Blocker = styled.div`
-height: 65px;
+height: 66px;
 width: 100%;
 background: white;
 bottom: 0;
-transform: translateY(-87px);
+transform: translateY(-90px);
 z-index: 999;
 display: flex;
 justify-content: center;
@@ -18,7 +18,7 @@ align-items: center;
 
     @media screen and (max-width: 900px) {
         height: 110px;
-        transform: translateY(-127px);
+        transform: translateY(-130px);
     }
 `
 
