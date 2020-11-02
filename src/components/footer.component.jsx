@@ -6,6 +6,7 @@ const Container = styled.div`
 	height: auto;
 	background: #273420;
 	color: #ffffff;
+	padding: 1% 5%;
 `
 const NavContainer = styled.div`
 display: flex;

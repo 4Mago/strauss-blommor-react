@@ -35,7 +35,7 @@ const OpenHours = () => {
         <h4>  Öppettider </h4>
         Måndag - Fredag 10.00 - 18.30
         <br/>  Lördag 10.00 - 16.00
-        <br/>  Söndag <style color='red'>Stängt</style>
+        <br/>  Söndag - Stängt
         </ImageContainer>
         <ImageContainer>
         <Icon src="/images/henock_inkoner_04.png" alt=""></Icon>
