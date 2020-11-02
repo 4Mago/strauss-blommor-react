@@ -25,9 +25,10 @@ color: #ffffff;
 const Img = styled.img`
   height: 50px;
   width: 50px;
+  padding: 2px;
 `
 
-const Left = styled.text`
+const Left = styled.div`
   padding: 15px;
   text-align: left;
   font-family: poppins;
@@ -42,7 +43,7 @@ padding: 15px;
 
 `
 
-const Right = styled.text`
+const Right = styled.div`
   padding: 20px;
   text-align: right;
   font-family: poppins;
