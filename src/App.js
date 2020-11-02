@@ -13,6 +13,7 @@ import HomeContextProvider from './store/home-context.component'
 // let GoingDown2 = useRef(null)
 
 const App = () => (
+
 	<div>
 		<Header />
 		<Route path={'/'} exact>

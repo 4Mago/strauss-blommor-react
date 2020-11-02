@@ -10,14 +10,26 @@ import GoingUp2 from '../components/parallax/goingUp2'
 import GoingDown from '../components/parallax/goingDown'
 import HeaderImage from '../components/header-image.component'
 import SliderShow from '../components/SliderShow'
+
 import { HomeContext } from '../store/home-context.component'
 import OpenHours from '../components/openHours'
+
+import styled from 'styled-components'
+
+const OuterContainer = styled.div`
+width: 100%;
+height: 130vh;
+display: flex;
+justify-content: center;
+align-items: center;
+`
+
 
 const Home = () => {
 	const { home } = useContext(HomeContext)
 	return (
 		<div>
-			<div className='outer-container'>
+		 <OuterContainer>
 				<GoingDown />
 				<HeaderImage>
 					<div className='main-inner'>
@@ -30,7 +42,7 @@ const Home = () => {
 					</div>
 				</HeaderImage>
 				<GoingDown2 />
-			</div>
+			 </OuterContainer>
 
 			<SliderShow />
 			<GreetingText></GreetingText>
@@ -41,6 +53,7 @@ const Home = () => {
 			<div className='vertical-space-inbetween4'></div>
 		</div>
 	)
+
 }
 
 export default Home

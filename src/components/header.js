@@ -3,11 +3,57 @@ import '../components/the-big-file.css'
 import { Link } from 'react-router-dom'
 import sanityClient from '../Client'
 import imageUrlBuilder from '@sanity/image-url'
+import styled from 'styled-components'
 
 const builder = imageUrlBuilder(sanityClient)
 function urlFor(source) {
 	return builder.image(source)
 }
+
+const ImgContainer = styled.div`
+background: white;
+margin-top: 19px;
+display: flex;
+justify-content: center;
+align-items: center;
+`
+
+const NavContainer = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+height: 60px;
+text-decoration: none;
+
+@media screen and (max-width: 700px) {
+  width: 100%;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+@media screen and (max-width: 500px) {
+
+}
+`
+
+const NavLinks = styled.div`
+display: flex;
+font-family: 'Poppins', sans-serif;
+font-size: 1em;
+font-weight: 400;
+color: black;
+justify-content: space-between;
+gap: 1.5em;
+
+@media screen and (max-width: 700px) {
+  gap: 10px;
+}
+
+@media screen and (max-width: 500px) {
+
+}
+`
+
 
 
 const Header = () => {
@@ -27,22 +73,22 @@ const Header = () => {
   
 return (
   <header>
-  <div className='header-logo'>
+  <ImgContainer>
     <Link to="/">
     <img alt="logo" src={urlFor(header.logo).url()} />
     </Link>
 
    
-        </div>
-    <div className='nav-container'>
-      <div className='nav-links'>
+        </ImgContainer>
+    <NavContainer>
+      <NavLinks>
       
       {header.menu ? header.menu.map((item, id) => {
         return (  <Link key={id} className='menu-item' to={`/${item.toLowerCase()}`}>{item}</Link>)
       }) : null}
 
-      </div>
-    </div>
+      </NavLinks>
+    </NavContainer>
 </header>
 
 )

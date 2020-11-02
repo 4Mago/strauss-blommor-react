@@ -5,37 +5,6 @@
 }
 
 /****************************************************                      ~            HEADER.js             ~                           ****************************************************/
-.flower {
-    box-shadow: 0 0 12px 0 #EEE1E1;
-}
-
-.header-logo {
-    background: white;
-    margin-top: 19px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    text-decoration: none;
-}
-
-
-
-.nav-links {
-    display: flex;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1em;
-    font-weight: 400;
-    color: black;
-    justify-content: space-between;
-    gap: 1.5em;
-}
 
 .menu-item {
     text-decoration: none;
@@ -54,35 +23,6 @@
     fill: #fdd5d6;
 }
 
-.flower {
-    fill: #fdd5d6;
-}
-
-.svg-box {
-    background: transparent;
-}
-
-.main-outer {
-    width: 90%;
-    height: 100%;
-    background: center / cover no-repeat url('/images/strauss-bakgrudn.png');
-    object-fit: cover;
-}
-
-.company-logo {
-    position: absolute;
-    width: 350px;
-    height: auto;
-    left: 44px;
-}
-
-.outer-container {
-    width: 100%;
-    height: 130vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .main-inner {
     clear: both;
@@ -153,18 +93,6 @@
 
 /****************************************************           ~            INDEX.js -> GREETING CONTAINER            ~                ****************************************************/
 
-.POWR-blocker {
-    height: 65px;
-    width: 100%;
-    background: white;
-    bottom: 0;
-    transform: translateY(-87px);
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .greeting-text {
     display: grid;
     margin: 1em;
@@ -188,142 +116,8 @@
     background: #FFEBEC;
 }
 
-/* intropage */
-
-.cover {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.wrap {
-    padding: 0px 0;
-    width: 500px;
-    height: 100%;
-    background: transparent;
-}
-
-.logo-box {
-    position: absolute;
-    transform: translate(35%);
-}
-
-.logo {
-    z-index: 999;
-    width: 400px;
-    height: auto;
-    animation: animate ease 5s 7s forwards;
-    opacity: 0;
-}
-
-.vertical-space-inbetween {
-    height: 10vh;
-    top: 0;
-    background: transparent;
-}
-
-.vertical-space-inbetween1 {
-    height: 2vh;
-    margin-top: 4px;
-    top: 0;
-    background: #ffebece0;
-}
-
-.vertical-space-inbetween2 {
-    height: 1vh;
-    margin-top: 5px;
-    top: 0;
-    background: #ffebecbd;
-}
-
-.vertical-space-inbetween3 {
-    height: 0.5vh;
-    margin-top: 6px;
-    top: 0;
-    background: #ffebecab;
-}
-
-.vertical-space-inbetween4 {
-    height: 0.3vh;
-    margin-top: 4px;
-    top: 0;
-    background: #ffebec75;
-}
-
-
-
-/****************************************************                      ~            @keyframes             ~                           ****************************************************/
-
-
-@keyframes animate {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
 
 /****************************************************                      ~            @media screen             ~                           ****************************************************/
-
-@media screen and (max-width: 1500px) {
-    .wrap {
-        width: 400px;
-        height: auto;
-    }
-}
-
-
-@media screen and (max-width: 1300px) {
-    .wrap {
-        width: 350x;
-        height: auto;
-    }
-}
-
-
-
-@media screen and (max-width: 1200px) {
-    .wrap {
-        width: 325px;
-        height: auto;
-    }
-}
-
-/* This is for .greeting-text*/
-@media screen and (max-width: 960px) {
-    .greeting-text {
-        width: 100%;
-        text-indent: 0 0;
-    }
-
-    .wrap {
-        width: 300px;
-        height: auto;
-    }
-}
-
-/* This is for .slope-figure-main*/
-
-
-@media screen and (max-width: 800px) {
-    .wrap {
-        width: 275px;
-        height: auto;
-    }
-
-    .POWR-blocker {
-        height: 110px;
-        transform: translateY(-127px);
-    }
-
-
-}
 
 @media screen and (max-width: 700px) {
 
@@ -333,44 +127,11 @@
         justify-content: center;
         align-items: center;
     }
-
-    .main-container {
-        order: 0;
-    }
-
-    .wrap-container {
-        order: -1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
 }
-
-
 
 /* This is for .nav-container and .nav-links*/
 
 @media screen and (max-width: 700px) {
-    .nav-container {
-        width: 100%;
-        padding-right: 8px;
-        padding-left: 8px;
-    }
-
-    .nav-links {
-        gap: 10px;
-    }
-
-    .wrap {
-        width: 200px;
-        height: auto;
-    }
-
-    .main-container {
-        padding: 20px;
-    }
-
     .middle-part {
         margin-bottom: 40vh;
     }

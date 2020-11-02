@@ -14,15 +14,26 @@ const ContainerTitle = styled.div`
     left: 0;
     color: #ffffff;
     font-size: 54px;
-    }
+    order: 0;
     p {
             text-align: left;
             left: 0;
             font-size: 22px;
             color: white;   
     }
+    @media screen and (max-width: 1200px) {
+        h2{
+    font-size: 45px;
+    text-align: center;
+    }
+     p {
+            font-size: 18px;
+            text-align: center;
+        }
+    }
 
-    @media (max-width: 960px)   
+    @media screen and (max-width: 960px) {
+        h2{
     font-size: 36px;
     text-align: center;
     }
