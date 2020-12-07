@@ -1,5 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { KontaktContext } from '../store/kontakt.context'
+import imageUrlBuilder from '@sanity/image-url'
+import sanityClient from '../Client'
+
+
+const builder = imageUrlBuilder(sanityClient)
+function urlFor(source) {
+	return builder.image(source)
+}
 
 const Container = styled.div`
     background: center / cover no-repeat url(/images/rose-brollop.jpg);
@@ -45,14 +54,33 @@ const Text = styled.div`
 `
 
 const Kontakt = () => {
+
+    const { kontakt } = useContext(KontaktContext)
+    
     return (
         <div>
         <Container>
-            <h1>Kontakta oss!</h1>
+            <h1>{kontakt.title}</h1>
         </Container>
         <SegmentContainer>
-            <Segment><Photo /><Text /></Segment>
-            <Segment><Text /><Photo /></Segment>
+        <Segment>						
+                <Photo
+							alt='hero image'
+							className='heroimage'
+							id='heroimage'
+							src={urlFor(kontakt.image).url()}
+						/>          
+            <Text />
+        </Segment>
+        <Segment>
+                <Photo
+							alt='hero image'
+							className='heroimage'
+							id='heroimage'
+							src={urlFor(kontakt.image).url()}
+						/>
+            <Text />
+        </Segment>
         </SegmentContainer>
         </div>
     )

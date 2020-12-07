@@ -1,5 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { BuketterContext } from '../store/buketter.context'
+import imageUrlBuilder from '@sanity/image-url'
+import sanityClient from '../Client'
+
+
+const builder = imageUrlBuilder(sanityClient)
+function urlFor(source) {
+	return builder.image(source)
+}
 
 const Container = styled.div`
     background: center / cover no-repeat url(/images/rose-brollop.jpg);
@@ -45,16 +54,35 @@ const Text = styled.div`
 `
 
 const Buketter = () => {
+
+    const { buketter } = useContext(BuketterContext)
+
     return (
-        <div>
+        <>
         <Container>
-            <h1>Buketter</h1>
+            <h1>{buketter.title}</h1>
         </Container>
         <SegmentContainer>
-            <Segment><Photo /><Text /></Segment>
-            <Segment><Text /><Photo /></Segment>
-        </SegmentContainer>
-        </div>
+        <Segment>						
+                <Photo
+							alt='hero image'
+							className='heroimage'
+							id='heroimage'
+							src={urlFor(buketter.image).url()}
+						/>          
+            <Text />
+        </Segment>
+        <Segment>
+                <Photo
+							alt='hero image'
+							className='heroimage'
+							id='heroimage'
+							src={urlFor(buketter.image).url()}
+						/>
+            <Text />
+        </Segment>
+    </SegmentContainer>
+        </>
     )
 }
 

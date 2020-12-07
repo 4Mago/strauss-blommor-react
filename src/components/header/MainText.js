@@ -1,5 +1,5 @@
 import React from 'react'
-import '../components/the-big-file.css'
+import '../the-big-file.css'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -13,7 +13,7 @@ const ContainerTitle = styled.div`
 	text-align: left;
 	left: 0;
 	color: #ffffff;
-	font-size: 54px;
+	font-size: 34px;
 	order: 0;
 	p {
 		text-align: left;
@@ -23,7 +23,7 @@ const ContainerTitle = styled.div`
 	}
 	@media screen and (max-width: 1200px) {
 		h2 {
-			font-size: 45px;
+			font-size: 35px;
 			text-align: center;
 		}
 		p {

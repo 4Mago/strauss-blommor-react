@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import '../components/the-big-file.css'
+import '../the-big-file.css'
 import { Link } from 'react-router-dom'
-import sanityClient from '../Client'
+import sanityClient from '../../Client'
 import imageUrlBuilder from '@sanity/image-url'
 import styled from 'styled-components'
 

@@ -1,5 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { BegravContext } from '../store/begravning.context'
+import imageUrlBuilder from '@sanity/image-url'
+import sanityClient from '../Client'
+
+const builder = imageUrlBuilder(sanityClient)
+function urlFor(source) {
+	return builder.image(source)
+}
+
 const Container = styled.div`
     background: center / cover no-repeat url(/images/rose-brollop.jpg);
     width: 100wv;
@@ -44,16 +53,35 @@ const Text = styled.div`
 `
 
 const Begravning = () => {
+    
+    const { begravning } = useContext(BegravContext)
+
     return (
-        <div>
+        <>
         <Container>
-            <h1>Begravning</h1>
+            <h1>{begravning.title}</h1>
         </Container>
         <SegmentContainer>
-            <Segment><Photo /><Text /></Segment>
-            <Segment><Text /><Photo /></Segment>
-        </SegmentContainer>
-        </div>
+        <Segment>						
+                <Photo
+							alt='hero image'
+							className='heroimage'
+							id='heroimage'
+							src={urlFor(begravning.image).url()}
+						/>          
+            <Text />
+        </Segment>
+        <Segment>
+                <Photo
+							alt='hero image'
+							className='heroimage'
+							id='heroimage'
+							src={urlFor(begravning.image).url()}
+						/>
+            <Text />
+        </Segment>
+    </SegmentContainer>
+        </>
     )
 }
 export default Begravning

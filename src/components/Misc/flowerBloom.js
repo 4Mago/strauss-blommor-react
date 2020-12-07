@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './the-big-file.css'
+import '../the-big-file.css'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -14,8 +14,8 @@ const Container = styled.div`
 
 const Wrap = styled.div`
 padding: 0px 0;
-width: 475px;
-height: 100%;
+width: 375px;
+height: auto;
 background: transparent;
 
 @media screen and (max-width: 1300px) {
