@@ -32,6 +32,7 @@ const MenuLinkOpenhours = styled(Link)`
 const Container = styled.div`
 	padding-top: 15vh;
 	background-color: black;
+	color: white;
 	padding: 50px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);

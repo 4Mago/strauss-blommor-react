@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { BrollopContext } from '../store/brollop.context'
+import imageUrlBuilder from '@sanity/image-url'
+import sanityClient from '../Client'
+
+const builder = imageUrlBuilder(sanityClient)
+function urlFor(source) {
+	return builder.image(source)
+}
 
 const Container = styled.div`
-    background: center / cover no-repeat url(/images/rose-brollop.jpg);
     width: 100wv;
     height: 385px;
     font-size: 36px;
@@ -45,20 +52,40 @@ const Text = styled.div`
 `
 
 const Brollop = () => {
-
     
+    const { brollop } = useContext(BrollopContext)
 
     return (
-        <div>
-        <Container>
-            <h1>Bröllop</h1>
-        </Container>
+        <>
+				{brollop
+					? brollop.map((item, id) => (
+							<Container key={id}>
+                                <Text>{item.title}</Text>
+
         <SegmentContainer>
-            <Segment><Photo /><Text /></Segment>
-            <Segment><Text /><Photo /></Segment>
-        </SegmentContainer>
-        </div>
+        <Segment>						
+                <Photo
+							alt='hero image'
+							className='heroimage'
+							id='heroimage'
+							src={urlFor(item.image).url()}
+						/>          
+            <Text />
+        </Segment>
+        <Segment>
+                <Photo
+							alt='hero image'
+							className='heroimage'
+							id='heroimage'
+							src={urlFor(item.image).url()}
+						/>
+            <Text />
+        </Segment>
+    </SegmentContainer>
+    </Container>
+                    ))
+                    :null }
+        </>
     )
 }
-
 export default Brollop

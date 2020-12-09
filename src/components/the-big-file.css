@@ -26,15 +26,6 @@
 }
 
 
-.main-inner {
-    clear: both;
-    display: grid;
-    height: 100%;
-    grid-template-columns: 0.3fr 11.4fr 0.3fr;
-    bottom: 0;
-}
-
-
 .left-text {
     display: flex;
     height: 100%;
@@ -60,13 +51,6 @@
 .outmost-left-text,
 .outmost-right-text {
     stroke: #27342083 !important;
-}
-
-.middle-part {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 20vh;
 }
 
 .main-container {

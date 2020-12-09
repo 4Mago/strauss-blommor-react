@@ -4,14 +4,12 @@ import { BuketterContext } from '../store/buketter.context'
 import imageUrlBuilder from '@sanity/image-url'
 import sanityClient from '../Client'
 
-
 const builder = imageUrlBuilder(sanityClient)
 function urlFor(source) {
 	return builder.image(source)
 }
 
 const Container = styled.div`
-    background: center / cover no-repeat url(/images/rose-brollop.jpg);
     width: 100wv;
     height: 385px;
     font-size: 36px;
@@ -19,7 +17,7 @@ const Container = styled.div`
     justify-content: center;
     color: #4A1F1F;
     font-family: poppins;
-    
+
     h1 {
         padding-top: 35px;
     }
@@ -54,21 +52,23 @@ const Text = styled.div`
 `
 
 const Buketter = () => {
-
+    
     const { buketter } = useContext(BuketterContext)
 
     return (
         <>
-        <Container>
-            <h1>{buketter.title}</h1>
-        </Container>
+				{buketter
+					? buketter.map((item, id) => (
+							<Container key={id}>
+                                <Text>{item.title}</Text>
+
         <SegmentContainer>
         <Segment>						
                 <Photo
 							alt='hero image'
 							className='heroimage'
 							id='heroimage'
-							src={urlFor(buketter.image).url()}
+							src={urlFor(item.image).url()}
 						/>          
             <Text />
         </Segment>
@@ -77,13 +77,15 @@ const Buketter = () => {
 							alt='hero image'
 							className='heroimage'
 							id='heroimage'
-							src={urlFor(buketter.image).url()}
+							src={urlFor(item.image).url()}
 						/>
             <Text />
         </Segment>
     </SegmentContainer>
+    </Container>
+                    ))
+                    :null }
         </>
     )
 }
-
 export default Buketter

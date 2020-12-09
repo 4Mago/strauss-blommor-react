@@ -4,14 +4,12 @@ import { KontaktContext } from '../store/kontakt.context'
 import imageUrlBuilder from '@sanity/image-url'
 import sanityClient from '../Client'
 
-
 const builder = imageUrlBuilder(sanityClient)
 function urlFor(source) {
 	return builder.image(source)
 }
 
 const Container = styled.div`
-    background: center / cover no-repeat url(/images/rose-brollop.jpg);
     width: 100wv;
     height: 385px;
     font-size: 36px;
@@ -54,21 +52,23 @@ const Text = styled.div`
 `
 
 const Kontakt = () => {
-
-    const { kontakt } = useContext(KontaktContext)
     
+    const { kontakt } = useContext(KontaktContext)
+
     return (
-        <div>
-        <Container>
-            <h1>{kontakt.title}</h1>
-        </Container>
+        <>
+				{kontakt
+					? kontakt.map((item, id) => (
+							<Container key={id}>
+                                <Text>{item.title}</Text>
+
         <SegmentContainer>
         <Segment>						
                 <Photo
 							alt='hero image'
 							className='heroimage'
 							id='heroimage'
-							src={urlFor(kontakt.image).url()}
+							src={urlFor(item.image).url()}
 						/>          
             <Text />
         </Segment>
@@ -77,12 +77,15 @@ const Kontakt = () => {
 							alt='hero image'
 							className='heroimage'
 							id='heroimage'
-							src={urlFor(kontakt.image).url()}
+							src={urlFor(item.image).url()}
 						/>
             <Text />
         </Segment>
-        </SegmentContainer>
-        </div>
+    </SegmentContainer>
+    </Container>
+                    ))
+                    :null }
+        </>
     )
 }
 export default Kontakt

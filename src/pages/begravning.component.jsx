@@ -10,7 +10,6 @@ function urlFor(source) {
 }
 
 const Container = styled.div`
-    background: center / cover no-repeat url(/images/rose-brollop.jpg);
     width: 100wv;
     height: 385px;
     font-size: 36px;
@@ -58,16 +57,18 @@ const Begravning = () => {
 
     return (
         <>
-        <Container>
-            <h1>{begravning.title}</h1>
-        </Container>
+				{begravning
+					? begravning.map((item, id) => (
+							<Container key={id}>
+                                <Text>{item.title}</Text>
+
         <SegmentContainer>
         <Segment>						
                 <Photo
 							alt='hero image'
 							className='heroimage'
 							id='heroimage'
-							src={urlFor(begravning.image).url()}
+							src={urlFor(item.image).url()}
 						/>          
             <Text />
         </Segment>
@@ -76,11 +77,14 @@ const Begravning = () => {
 							alt='hero image'
 							className='heroimage'
 							id='heroimage'
-							src={urlFor(begravning.image).url()}
+							src={urlFor(item.image).url()}
 						/>
             <Text />
         </Segment>
     </SegmentContainer>
+    </Container>
+                    ))
+                    :null }
         </>
     )
 }

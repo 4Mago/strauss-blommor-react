@@ -1,16 +1,13 @@
 import React from 'react'
 import '../components/the-big-file.css'
-import MainText from '../components/header/MainText'
-import GoingUp from '../components/parallax/goingUp'
 import GoingDown2 from '../components/parallax/GoingDown2'
-import GoingUp2 from '../components/parallax/goingUp2'
 import GoingDown from '../components/parallax/goingDown'
-import HeaderImage from '../components/header/header-image.component'
 import SliderShow from '../components/Misc/SliderShow'
-// import { HomeContext } from '../store/home-context.component'
+import { HomeContext } from '../store/home-context.component'
 import OpenHours from '../components/Misc/openHours'
 import styled from 'styled-components'
 import GoogleMaps from '../components/Misc/GoogleMaps'
+import Header from '../components/header/header'
 
 const OuterContainer = styled.div`
 	width: 100%;
@@ -22,21 +19,11 @@ const OuterContainer = styled.div`
 
 const Home = () => {
 	// Keep to connect to sanity comment to remove warning import {useContext} from React
-	// const { home } = useContext(HomeContext)
 	return (
 		<div>
 			<OuterContainer>
 				<GoingDown />
-				<HeaderImage>
-					<div className='main-inner'>
-						<GoingUp />
-						<div id='' className='middle-part'>
-							{/* <div className='logo-box'><img className='logo' alt='logo' src='/images/strauss-logo.png'></img></div> */}
-							<MainText></MainText>
-						</div>
-						<GoingUp2 />
-					</div>
-				</HeaderImage>
+				<Header />				
 				<GoingDown2 />
 			</OuterContainer>
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from './pages/home.component'
-import Header from './components/header/header'
+import Navbar from './components/header/navbar'
 import Brollop from './pages/brollop.component'
 import { Route } from 'react-router-dom'
 import Footer from './components/footer/footer.component'
@@ -19,7 +19,7 @@ import BrollopContextProvider from './store/brollop.context'
 const App = () => (
 	<div>
 		<ScrollToTop />
-		<Header />
+		<Navbar />
 		<Route path={'/'} exact>
 			<HomeContextProvider>
 				<Home />

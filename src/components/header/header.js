@@ -1,104 +1,65 @@
-import React, { useState, useEffect } from 'react'
-import '../the-big-file.css'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { HomeContext } from '../../store/home-context.component'
+import styled from 'styled-components'
 import sanityClient from '../../Client'
 import imageUrlBuilder from '@sanity/image-url'
-import styled from 'styled-components'
+import GoingUp from '../parallax/goingUp'
+import GoingUp2 from '../parallax/goingUp2'
 
 const builder = imageUrlBuilder(sanityClient)
 function urlFor(source) {
 	return builder.image(source)
 }
 
-const ImgContainer = styled.div`
-	background: white;
-	margin-top: 19px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+const MainInner = styled.div`
+    clear: both;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 0.3fr 11.4fr 0.3fr;
+    bottom: 0;
 `
 
-const NavContainer = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 60px;
-	text-decoration: none;
-
-	@media screen and (max-width: 700px) {
-		width: 100%;
-		padding-right: 8px;
-		padding-left: 8px;
-	}
-
-	@media screen and (max-width: 500px) {
-	}
+const HeaderImage = styled.div`
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
 `
 
-const NavLinks = styled.div`
-	display: flex;
-	font-family: 'Poppins', sans-serif;
-	font-size: 1em;
-	font-weight: 400;
-	color: black;
-	justify-content: space-between;
-	gap: 1.5em;
+const MiddlePart = styled.p`
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20vh;
+`
 
-	@media screen and (max-width: 700px) {
-		gap: 10px;
-	}
-
-	@media screen and (max-width: 500px) {
-	}
+const MiddleText = styled.h2`
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20vh;
 `
 
 const Header = () => {
-	const [header, setHeader] = useState('')
-
-	useEffect(() => {
-		const headerQuery = `*[_type == "header"]`
-
-		sanityClient.fetch(headerQuery).then(header => {
-			header.forEach(header => {
-				setHeader(header)
-			})
-		})
-		return
-	}, [])
-
-	return (
-		<header>
-			<ImgContainer>
-				<Link to='/'>
-					<img alt='logo' src={urlFor(header.logo).url()} />
-				</Link>
-			</ImgContainer>
-			<NavContainer>
-				<NavLinks>
-					{header.menu
-						? header.menu.map((item, id) => {
-								return (
-									<Link
-										key={id}
-										className='menu-item'
-										to={`/${item
-											.replace(/å/g, 'a')
-											.replace(/Å/g, 'a')
-											.replace(/ä/g, 'a')
-											.replace(/Ä/g, 'a')
-											.replace(/ö/g, 'o')
-											.replace(/Ö/g, 'o')
-											.toLowerCase()}`}
-									>
-										{item}
-									</Link>
-								)
-						  })
-						: null}
-				</NavLinks>
-			</NavContainer>
-		</header>
-	)
+    const { home } = useContext(HomeContext)
+    return (
+        <>
+        <HeaderImage
+            alt='hero image'
+            className='heroimage'
+            id='heroimage'
+            src={urlFor(home.heroImage).url()}
+        >
+            <MainInner>
+                <GoingUp />
+    <MiddleText>{home.title}</MiddleText>
+    <MiddlePart>{home.description}</MiddlePart>
+                <GoingUp2 />
+            </MainInner>
+        </HeaderImage>
+        </>
+    )
 }
 
 export default Header
