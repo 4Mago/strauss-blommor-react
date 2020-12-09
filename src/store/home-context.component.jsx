@@ -7,13 +7,12 @@ const HomeContextProvider = props => {
 	const [home, setHome] = useState('')
 	const [loaded, setLoaded] = useState(false)
 	useEffect(() => {
-		const homeQuery = `*[_type == "client"] | order(date desc)`
+		const homeQuery = `*[_type == "hemsida"]`
 		sanityClient.fetch(homeQuery).then(home => {
-			const homeArray = []
 			home.forEach(home => {
-				homeArray.push(home)
+				setHome(home)
 			})
-			setHome(homeArray)
+		
 			setLoaded(true)
 		})
 		return

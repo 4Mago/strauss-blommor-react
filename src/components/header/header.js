@@ -22,7 +22,9 @@ const MainInner = styled.div`
 const HeaderImage = styled.div`
     width: 90%;
     height: 100%;
-    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 `
 
 const MiddlePart = styled.p`
@@ -49,7 +51,7 @@ const Header = () => {
             alt='hero image'
             className='heroimage'
             id='heroimage'
-            src={urlFor(home.heroImage).url()}
+            style={{backgroundImage:`url(${urlFor(home.heroImage).url()})`}}
         >
             <MainInner>
                 <GoingUp />
