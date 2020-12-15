@@ -13,6 +13,7 @@ function urlFor(source) {
 const MenuLink = styled(Link)`
 	text-decoration: none;
 	transition: 0.2s all ease;
+	color: white;
 
 	&:hover {
 		font-size: 19px;
@@ -31,7 +32,7 @@ const MenuLinkOpenhours = styled(Link)`
 
 const Container = styled.div`
 	padding-top: 15vh;
-	background-color: black;
+	background-color: #273420;
 	color: white;
 	padding: 50px;
 	display: grid;
@@ -49,7 +50,7 @@ const Container = styled.div`
 const InfoContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	height: 300px;
+	height: 150px;
 	text-align: center;
 	@media screen and (min-width: 600px) {
 		&:nth-child(1) {
@@ -165,9 +166,9 @@ const Footer = () => {
 						: null}
 				</InfoContainer>
 				<InfoContainer>
-					<InfoHeader>Kontakta oss!</InfoHeader>
-					Vi har öppet dygnet runt alla dagar. Hör av er till{' '}
-					<a href='tel:0707972446'>070-797 2446</a>
+					<InfoHeader>Hälsa på!</InfoHeader>
+					Vi har öppet under jul och nyår! <br /> Lägg en beställning på:
+					<a href='tel:0707972446'>08-20 98 40</a>
 					<InfoText>
 						<InfoHeader>Socials</InfoHeader>
 						{footer.socialMedia
@@ -184,7 +185,6 @@ const Footer = () => {
 					</InfoText>
 				</InfoContainer>
 			</Container>
-			<FooterLogo />
 		</>
 	)
 }

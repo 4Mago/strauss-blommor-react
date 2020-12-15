@@ -9,13 +9,11 @@ const Figure = styled.div`
     fill: #FFEBEC;
 `
 const Box = styled.div`
-{
     width: 100%;
     height: 100%;
     height: auto;
     bottom: -5px;
     fill: #FFEBEC;
-}
 `
 
 const SlopeFigure = () => {

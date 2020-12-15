@@ -3,63 +3,76 @@ import { HomeContext } from '../../store/home-context.component'
 import styled from 'styled-components'
 import sanityClient from '../../Client'
 import imageUrlBuilder from '@sanity/image-url'
-import GoingUp from '../parallax/goingUp'
-import GoingUp2 from '../parallax/goingUp2'
+// import GoingUp from '../parallax/goingUp'
+// import GoingUp2 from '../parallax/goingUp2'
 
 const builder = imageUrlBuilder(sanityClient)
 function urlFor(source) {
 	return builder.image(source)
 }
 
-const MainInner = styled.div`
-    clear: both;
-    display: grid;
-    height: 100%;
-    grid-template-columns: 0.3fr 11.4fr 0.3fr;
-    bottom: 0;
+const OuterMain = styled.div`
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 558px;
+    width: 1440px;
+    left: 0px;
+    top: 108px;
+    background-color: #273420;
 `
 
 const HeaderImage = styled.div`
-    width: 90%;
-    height: 100%;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+`
+
+const MainInner = styled.div`
+    display: flex;
+
 `
 
 const MiddlePart = styled.p`
-    color: black;
+    color: white;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 20vh;
+    text-align: left;
+    align-items: left;
+    font-size: 18px;
+    width: 350px;
+    margin-top: 15px;
 `
 
 const MiddleText = styled.h2`
-    color: black;
+    color: white;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 20vh;
+    flex-flow: column;
+    text-align: left;
+    align-items: left;
+    justify-content: flex-start;
+    margin: 20vh;
 `
 
 const Header = () => {
     const { home } = useContext(HomeContext)
     return (
         <>
+        <OuterMain>
         <HeaderImage
             alt='hero image'
             className='heroimage'
             id='heroimage'
             style={{backgroundImage:`url(${urlFor(home.heroImage).url()})`}}
-        >
+            >
             <MainInner>
-                <GoingUp />
-    <MiddleText>{home.title}</MiddleText>
+    <MiddleText>{home.title}
     <MiddlePart>{home.description}</MiddlePart>
-                <GoingUp2 />
+    </MiddleText>
+    
             </MainInner>
         </HeaderImage>
+        </OuterMain>
         </>
     )
 }

@@ -39,13 +39,11 @@
 
 .right-text {
     display: flex;
-    height: 100%;
-    justify-content: flex-end;
     align-items: center;
+    justify-content: flex-end;
     stroke: #EEE1E1;
     z-index: 999;
     stroke-width: 1px;
-
 }
 
 .outmost-left-text,

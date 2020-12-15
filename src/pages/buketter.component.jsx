@@ -10,12 +10,12 @@ function urlFor(source) {
 }
 
 const Container = styled.div`
-    width: 100wv;
-    height: 385px;
+    width: 100%;
+    height: 100%;
     font-size: 36px;
     text-align: center;
     justify-content: center;
-    color: #4A1F1F;
+    color: #f58888;
     font-family: poppins;
 
     h1 {
@@ -37,13 +37,11 @@ const Segment = styled.div`
 `
 
 const Photo = styled.div`
-    width: 300px;
-    height: 300px;
     margin: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: grey;
+    object-fit: contain;
     `
 const Text = styled.div`
     padding: 15px;
@@ -56,20 +54,16 @@ const Buketter = () => {
     const { buketter } = useContext(BuketterContext)
 
     return (
-        <>
-				{buketter
-					? buketter.map((item, id) => (
-							<Container key={id}>
-                                <Text>{item.title}</Text>
-
-        <SegmentContainer>
-        <Segment>						
+    <Container>
+    <Text>{buketter.title}</Text>
                 <Photo
 							alt='hero image'
 							className='heroimage'
 							id='heroimage'
-							src={urlFor(item.image).url()}
-						/>          
+                            style={{backgroundImage:`url(${urlFor(buketter.heroImage).url()})`}}
+                            />          
+        <SegmentContainer>
+        <Segment>						
             <Text />
         </Segment>
         <Segment>
@@ -77,15 +71,12 @@ const Buketter = () => {
 							alt='hero image'
 							className='heroimage'
 							id='heroimage'
-							src={urlFor(item.image).url()}
+							src={urlFor(buketter.image).url()}
 						/>
-            <Text />
+            <Text>{buketter.description}</Text>
         </Segment>
     </SegmentContainer>
-    </Container>
-                    ))
-                    :null }
-        </>
+        </Container>
     )
 }
 export default Buketter

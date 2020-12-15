@@ -1,7 +1,5 @@
 import React from 'react'
 import '../components/the-big-file.css'
-import GoingDown2 from '../components/parallax/GoingDown2'
-import GoingDown from '../components/parallax/goingDown'
 import SliderShow from '../components/Misc/SliderShow'
 import OpenHours from '../components/Misc/openHours'
 import styled from 'styled-components'
@@ -10,7 +8,7 @@ import Header from '../components/header/header'
 
 const OuterContainer = styled.div`
 	width: 100%;
-	height: 130vh;
+	max-height: 130vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -21,11 +19,8 @@ const Home = () => {
 	return (
 		<div>
 			<OuterContainer>
-				<GoingDown />
-				<Header />				
-				<GoingDown2 />
+					<Header />				
 			</OuterContainer>
-
 			<SliderShow />
 			<OpenHours />
 			<GoogleMaps />

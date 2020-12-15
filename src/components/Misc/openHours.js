@@ -14,6 +14,7 @@ const Container = styled.div`
         flex-direction: column;
     }
     `
+
 const ImageContainer = styled.div`
     display: flex;
     width: 300px;
@@ -30,7 +31,6 @@ const Icon = styled.img`
     transition: .5s;
     z-index: 2;
 `
-
 
 const OpenHours = () => {
     return (

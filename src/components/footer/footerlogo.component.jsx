@@ -11,22 +11,19 @@ function urlFor(source) {
 
 const MenuLink = styled(Link)`
 text-decoration: none;
+color: white;
 `
 
 const Container = styled.div`
-    width: 100%;
-    height: 220px;
-    padding: 0;
-    margin: 0;
-	background-color: #686868;
+	background-color: #273420;
     display: flex;
     flex-direction: column;
 	justify-content: center;
     text-align: center;
     gap: 50px;
-    @media screen and (max-width: 500px) {
+    /* @media screen and (max-width: 500px) {
     height: 320px;
-    }
+    } */
 `
 
 const ImageDiv = styled.div`
@@ -70,7 +67,7 @@ const FooterLogo = () => {
 		<Container>
             <A href='#'><ImageDiv><HeroImage className='App-logo' alt='TEMC Logo' src={urlFor(header.logo).url()} /></ImageDiv></A>
 
-            <MenuLink>© Copyright TEMC 2020</MenuLink>
+            <MenuLink>© Copyright Strauss Blommor 2020</MenuLink>
             <br />
         </Container>
 	)
