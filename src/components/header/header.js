@@ -3,8 +3,6 @@ import { HomeContext } from '../../store/home-context.component'
 import styled from 'styled-components'
 import sanityClient from '../../Client'
 import imageUrlBuilder from '@sanity/image-url'
-// import GoingUp from '../parallax/goingUp'
-// import GoingUp2 from '../parallax/goingUp2'
 
 const builder = imageUrlBuilder(sanityClient)
 function urlFor(source) {
@@ -66,10 +64,9 @@ const Header = () => {
             style={{backgroundImage:`url(${urlFor(home.heroImage).url()})`}}
             >
             <MainInner>
-    <MiddleText>{home.title}
-    <MiddlePart>{home.description}</MiddlePart>
-    </MiddleText>
-    
+            <MiddleText>{home.title}
+                <MiddlePart>{home.description}</MiddlePart>
+            </MiddleText>
             </MainInner>
         </HeaderImage>
         </OuterMain>
