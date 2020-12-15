@@ -1,91 +1,95 @@
-import React, { useContext } from 'react'
-import styled from 'styled-components'
-import { BrollopContext } from '../store/brollop.context'
-import imageUrlBuilder from '@sanity/image-url'
-import sanityClient from '../Client'
+import React, { useContext } from "react"
+import styled from "styled-components"
+import { BrollopContext } from "../store/brollop.context"
+import imageUrlBuilder from "@sanity/image-url"
+import sanityClient from "../Client"
 
 const builder = imageUrlBuilder(sanityClient)
 function urlFor(source) {
-	return builder.image(source)
+  return builder.image(source)
 }
 
 const Container = styled.div`
-    width: 100wv;
-    height: 385px;
-    font-size: 36px;
-    text-align: center;
-    justify-content: center;
-    color: #4A1F1F;
-    font-family: poppins;
+  width: 100%;
+  height: 100%;
 
-    h1 {
-        padding-top: 35px;
-    }
+  box-sizing: border-box;
+  padding: 0 5%;
+  color: #4a1f1f;
+  font-family: poppins;
+
+  h1 {
+    padding-top: 35px;
+  }
+  margin-bottom: 100px;
 `
 
 const SegmentContainer = styled.div`
-    display: grid;
-    grid-template-rows: auto;
-    gap: 10px;
-    padding: 15px;
-    margin: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column;
 `
 
 const Segment = styled.div`
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 50px 0;
 `
 
-const Photo = styled.div`
-    width: 300px;
-    height: 300px;
-    margin: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: grey;
-    `
-const Text = styled.div`
-    padding: 15px;
-    margin: 15px;
-    text-align: center;
+const Photo = styled.img`
+  width: 47.5%;
+  height: 400px;
+
+  object-fit: cover;
+`
+const TextCont = styled.div``
+const Text = styled.p`
+  box-sizing: border-box;
+
+  width: 100%;
+  padding: 10%;
+  text-align: center;
+`
+const Header = styled.h2`
+  font-size: 36px;
 `
 
 const Brollop = () => {
-    
-    const { brollop } = useContext(BrollopContext)
+  const { brollop } = useContext(BrollopContext)
 
-    return (
-        <>
-				{brollop
-					? brollop.map((item, id) => (
-							<Container key={id}>
-                                <Text>{item.title}</Text>
-
+  return (
+    <>
+      <Container>
+        <Header>{brollop.title}</Header>
         <SegmentContainer>
-        <Segment>						
-                <Photo
-							alt='hero image'
-							className='heroimage'
-							id='heroimage'
-							src={urlFor(item.image).url()}
-						/>          
-            <Text />
-        </Segment>
-        <Segment>
-                <Photo
-							alt='hero image'
-							className='heroimage'
-							id='heroimage'
-							src={urlFor(item.image).url()}
-						/>
-            <Text />
-        </Segment>
-    </SegmentContainer>
-    </Container>
-                    ))
-                    :null }
-        </>
-    )
+          <Segment>
+            <Photo
+              alt="hero image"
+              className="heroimage"
+              id="heroimage"
+              src={urlFor(brollop.image).url()}
+            />
+            <TextCont>
+              <Text>{brollop.description}</Text>
+            </TextCont>
+          </Segment>
+          <Segment>
+            <TextCont>
+              <Text>{brollop.description2}</Text>
+            </TextCont>
+
+            <Photo
+              alt="hero image"
+              className="heroimage"
+              id="heroimage"
+              src={urlFor(brollop.image2).url()}
+            />
+          </Segment>
+        </SegmentContainer>
+      </Container>
+    </>
+  )
 }
 export default Brollop
