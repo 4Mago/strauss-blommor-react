@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import sanityClient from '../../Client'
 import imageUrlBuilder from '@sanity/image-url'
-import FooterLogo from './footerlogo.component'
 
 const builder = imageUrlBuilder(sanityClient)
 function urlFor(source) {
