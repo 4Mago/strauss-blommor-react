@@ -19,7 +19,10 @@ const TaglineTitle = styled.h2`
 const TaglineText = styled.p`
     color: black;
     width: 550px;
-`
+
+    @media screen and (max-width: 500) {
+        width: 100%;
+    }`
 
 
 
@@ -28,12 +31,11 @@ const Tagline = () => {
     const { home } = useContext(HomeContext)
 
     return (
-        <>
-                    
+        <> 
             <TaglineDiv>
-    <TaglineTitle>{home.title}</TaglineTitle>
-    <TaglineText>{home.description2}</TaglineText>
-        </TaglineDiv>
+                <TaglineTitle>{home.title}</TaglineTitle>
+                <TaglineText>{home.description2}</TaglineText>
+            </TaglineDiv>
         </>
     )
 }

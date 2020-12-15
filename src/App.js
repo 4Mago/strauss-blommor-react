@@ -13,8 +13,6 @@ import BegravningContextProvider from './store/begravning.context'
 import KontaktContextProvider from './store/kontakt.context'
 import BuketterContextProvider from './store/buketter.context'
 import BrollopContextProvider from './store/brollop.context'
-// let goingUp = useRef(null)
-// let GoingDown2 = useRef(null)
 
 const App = () => (
 	<div>

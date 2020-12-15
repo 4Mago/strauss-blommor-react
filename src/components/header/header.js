@@ -57,18 +57,18 @@ const Header = () => {
     return (
         <>
         <OuterMain>
-        <HeaderImage
-            alt='hero image'
-            className='heroimage'
-            id='heroimage'
-            style={{backgroundImage:`url(${urlFor(home.heroImage).url()})`}}
-            >
-            <MainInner>
-            <MiddleText>{home.title}
-                <MiddlePart>{home.description}</MiddlePart>
-            </MiddleText>
-            </MainInner>
-        </HeaderImage>
+            <HeaderImage
+                alt='hero image'
+                className='heroimage'
+                id='heroimage'
+                style={{backgroundImage:`url(${urlFor(home.heroImage).url()})`}}
+                >
+                <MainInner>
+                    <MiddleText>{home.title}
+                        <MiddlePart>{home.description}</MiddlePart>
+                    </MiddleText>
+                </MainInner>
+            </HeaderImage>
         </OuterMain>
         </>
     )
