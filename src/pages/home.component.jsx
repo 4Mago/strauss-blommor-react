@@ -18,7 +18,7 @@ const OuterContainer = styled.div`
 const Home = () => {
 	// Keep to connect to sanity comment to remove warning import {useContext} from React
 	return (
-		<div>
+		<>
 			<OuterContainer>
 					<Header />				
 			</OuterContainer>
@@ -26,11 +26,7 @@ const Home = () => {
 			<SliderShow />
 			<OpenHours />
 			<GoogleMaps />
-			<div className='vertical-space-inbetween1'></div>
-			<div className='vertical-space-inbetween2'></div>
-			<div className='vertical-space-inbetween3'></div>
-			<div className='vertical-space-inbetween4'></div>
-		</div>
+		</>
 	)
 }
 
