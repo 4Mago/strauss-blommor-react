@@ -30,12 +30,20 @@ const Segment = styled.div`
   display: flex;
   justify-content: space-evenly;
   flex-flow: column;
+
+  @media screen and (max-width: 500px) {
+    flex-flow: column;
+  }
 `
 
 const Photo = styled.img`
   width: 100%;
   height: 400px;
   object-fit: cover;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
 `
 const Title = styled.h2`
   font-size: 36px;
@@ -49,7 +57,7 @@ const Title = styled.h2`
 
 const Text = styled.p`
   font-size: 14px;
-  width: 500px;
+  max-width: 500px;
   padding: 15px;
   margin: 15px;
   text-align: center;
@@ -65,8 +73,6 @@ const Kontakt = () => {
         <SegmentContainer>
           <Segment>
             <Text>{kontakt.description}</Text>
-          </Segment>
-          <Segment>
             <Photo
               alt="hero image"
               className="heroimage"

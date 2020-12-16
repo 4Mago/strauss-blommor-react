@@ -36,13 +36,20 @@ const Segment = styled.div`
   justify-content: flex-start;
   align-items: center;
   margin: 50px 0;
+
+  @media screen and (max-width: 500px) {
+    flex-flow: column;
+  }
 `
 
 const Photo = styled.img`
   width: 47.5%;
   height: 400px;
-
   object-fit: cover;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
 `
 const TextCont = styled.div``
 const Text = styled.p`

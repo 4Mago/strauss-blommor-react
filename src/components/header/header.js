@@ -26,6 +26,12 @@ const HeaderImage = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+
+  @media screen and (max-width: 500px) {
+    height: 40%;
+    padding-top: 320px;
+    top: 150px;
+  }
 `
 
 const MainInner = styled.div`
@@ -40,6 +46,11 @@ const MiddlePart = styled.p`
   font-size: 18px;
   width: 350px;
   margin-top: 15px;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    text-align: center;
+  }
 `
 
 const MiddleText = styled.h2`
@@ -50,6 +61,12 @@ const MiddleText = styled.h2`
   align-items: left;
   justify-content: flex-start;
   margin: 20vh;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    text-align: center;
+    margin: 0 10vh;
+  }
 `
 
 const Header = () => {
