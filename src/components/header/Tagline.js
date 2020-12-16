@@ -19,7 +19,7 @@ const TaglineText = styled.p`
   color: black;
   width: 550px;
 
-  @media screen and (max-width: 500) {
+  @media screen and (max-width: 550px) {
     width: 100%;
   }
 `
