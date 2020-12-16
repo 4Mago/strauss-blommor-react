@@ -10,7 +10,7 @@ function urlFor(source) {
 }
 
 const Container = styled.div`
-  width: 100wv;
+  width: 100%;
   height: auto;
   font-size: 36px;
   text-align: center;
@@ -20,37 +20,33 @@ const Container = styled.div`
 `
 
 const SegmentContainer = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  gap: 10px;
-  padding: 15px;
-  margin: 15px;
 `
 
 const Segment = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   flex-flow: column;
 `
 
 const Photo = styled.img`
-  width: 300px;
-  height: 300px;
-  margin: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: grey;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
 `
 const Title = styled.h2`
   font-size: 36px;
-  width: 400px;
+  max-width: 400px;
   text-align: center;
 
   @media screen and (max-width: 400px) {
     width: auto;
   }
 `
+
 const Text = styled.p`
   font-size: 14px;
   width: 500px;

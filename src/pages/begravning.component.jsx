@@ -12,7 +12,6 @@ function urlFor(source) {
 const Container = styled.div`
   width: 100%;
   height: 100%;
-
   box-sizing: border-box;
   padding: 0 5%;
   color: #4a1f1f;
