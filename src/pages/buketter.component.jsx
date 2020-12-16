@@ -1,82 +1,95 @@
-import React, { useContext } from 'react'
-import styled from 'styled-components'
-import { BuketterContext } from '../store/buketter.context'
-import imageUrlBuilder from '@sanity/image-url'
-import sanityClient from '../Client'
+import React, { useContext } from "react"
+import styled from "styled-components"
+import { BuketterContext } from "../store/buketter.context"
+import imageUrlBuilder from "@sanity/image-url"
+import sanityClient from "../Client"
 
 const builder = imageUrlBuilder(sanityClient)
 function urlFor(source) {
-	return builder.image(source)
+  return builder.image(source)
 }
 
 const Container = styled.div`
-    width: 100%;
-    height: 100%;
-    font-size: 36px;
-    text-align: center;
-    justify-content: center;
-    color: #f58888;
-    font-family: poppins;
+  width: 100%;
+  height: 100%;
 
-    h1 {
-        padding-top: 35px;
-    }
+  box-sizing: border-box;
+  padding: 0 5%;
+  color: #4a1f1f;
+  font-family: poppins;
+
+  h1 {
+    padding-top: 35px;
+  }
+  margin-bottom: 100px;
 `
 
 const SegmentContainer = styled.div`
-    display: grid;
-    grid-template-rows: auto;
-    gap: 10px;
-    padding: 15px;
-    margin: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column;
 `
 
 const Segment = styled.div`
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 50px 0;
 `
 
-const Photo = styled.div`
-    margin: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: contain;
-    `
-const Text = styled.div`
-    padding: 15px;
-    margin: 15px;
-    text-align: center;
+const Photo = styled.img`
+  width: 47.5%;
+  height: 400px;
+
+  object-fit: cover;
+`
+const TextCont = styled.div``
+const Text = styled.p`
+  box-sizing: border-box;
+
+  width: 100%;
+  padding: 10%;
+  text-align: center;
+`
+const Header = styled.h2`
+  font-size: 36px;
 `
 
 const Buketter = () => {
-    
-    const { buketter } = useContext(BuketterContext)
+  const { buketter } = useContext(BuketterContext)
 
-    return (
-    <Container>
-    <Text>{buketter.title}</Text>
-                <Photo
-							alt='hero image'
-							className='heroimage'
-							id='heroimage'
-                            style={{backgroundImage:`url(${urlFor(buketter.heroImage).url()})`}}
-                            />          
+  return (
+    <>
+      <Container>
+        <Header>{buketter.title}</Header>
         <SegmentContainer>
-        <Segment>						
-            <Text />
-        </Segment>
-        <Segment>
-                <Photo
-							alt='hero image'
-							className='heroimage'
-							id='heroimage'
-							src={urlFor(buketter.image).url()}
-						/>
-            <Text>{buketter.description}</Text>
-        </Segment>
-    </SegmentContainer>
-        </Container>
-    )
+          <Segment>
+            <Photo
+              alt="hero image"
+              className="heroimage"
+              id="heroimage"
+              src={urlFor(buketter.image).url()}
+            />
+            <TextCont>
+              <Text>{buketter.description}</Text>
+            </TextCont>
+          </Segment>
+          <Segment>
+            <TextCont>
+              <Text>{buketter.description2}</Text>
+            </TextCont>
+
+            <Photo
+              alt="hero image"
+              className="heroimage"
+              id="heroimage"
+              src={urlFor(buketter.image2).url()}
+            />
+          </Segment>
+        </SegmentContainer>
+      </Container>
+    </>
+  )
 }
 export default Buketter

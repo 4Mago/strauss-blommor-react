@@ -17,15 +17,11 @@ const Container = styled.div`
   justify-content: center;
   color: #4a1f1f;
   font-family: poppins;
-
-  h1 {
-    padding-top: 35px;
-  }
 `
 
 const SegmentContainer = styled.div`
-  display: grid;
-  grid-template-rows: auto;
+  display: flex;
+  justify-content: space-around;
   gap: 10px;
   padding: 15px;
   margin: 15px;
@@ -34,6 +30,7 @@ const SegmentContainer = styled.div`
 const Segment = styled.div`
   display: flex;
   justify-content: space-evenly;
+  flex-flow: column;
 `
 
 const Photo = styled.img`
@@ -45,7 +42,18 @@ const Photo = styled.img`
   align-items: center;
   background: grey;
 `
-const Text = styled.div`
+const Title = styled.h2`
+  font-size: 36px;
+  width: 400px;
+  text-align: center;
+
+  @media screen and (max-width: 400px) {
+    width: auto;
+  }
+`
+const Text = styled.p`
+  font-size: 14px;
+  width: 500px;
   padding: 15px;
   margin: 15px;
   text-align: center;
@@ -57,17 +65,10 @@ const Kontakt = () => {
   return (
     <>
       <Container>
-        <Text>{kontakt.title}</Text>
-
+        <Title>{kontakt.title}</Title>
         <SegmentContainer>
           <Segment>
-            <Photo
-              alt="hero image"
-              className="heroimage"
-              id="heroimage"
-              src={urlFor(kontakt.image).url()}
-            />
-            <Text />
+            <Text>{kontakt.description}</Text>
           </Segment>
           <Segment>
             <Photo
