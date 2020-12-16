@@ -22,12 +22,13 @@ const OuterMain = styled.div`
 `
 
 const HeaderImage = styled.div`
-  width: 100%;
-  background-position: center;
+  width: 70%;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
 
   @media screen and (max-width: 500px) {
+    background-position: center;
     height: 40%;
     padding-top: 320px;
     top: 150px;
