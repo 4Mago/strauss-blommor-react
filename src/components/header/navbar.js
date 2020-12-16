@@ -44,7 +44,6 @@ const NavLinks = styled.div`
   justify-content: space-between;
 
   @media screen and (max-width: 700px) {
-    gap: 10px;
   }
 
   @media screen and (max-width: 500px) {

@@ -37,6 +37,8 @@ const HeaderImage = styled.div`
 
 const MainInner = styled.div`
   display: flex;
+  align-items: center;
+  margin-top: 3vh;
 `
 
 const MiddlePart = styled.p`
@@ -61,12 +63,11 @@ const MiddleText = styled.h2`
   text-align: left;
   align-items: left;
   justify-content: flex-start;
-  margin: 20vh;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 700px) {
     width: 100%;
     text-align: center;
-    margin: 0 10vh;
+    margin: 0;
   }
 `
 
