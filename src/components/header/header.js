@@ -38,7 +38,7 @@ const HeaderImage = styled.div`
 const MainInner = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 3vh;
+  margin-top: 13vh;
 `
 
 const MiddlePart = styled.p`
