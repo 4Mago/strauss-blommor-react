@@ -1,11 +1,11 @@
 import React from 'react'
 import '../components/the-big-file.css'
-import SliderShow from '../components/Misc/SliderShow'
 import OpenHours from '../components/Misc/openHours'
 import styled from 'styled-components'
 import GoogleMaps from '../components/Misc/GoogleMaps'
 import Header from '../components/header/header'
 import Tagline from '../components/header/Tagline'
+import SliderBilder from '../components/sliderboy'
 
 const OuterContainer = styled.div`
 	width: 100%;
@@ -23,7 +23,7 @@ const Home = () => {
 					<Header />				
 			</OuterContainer>
 			<Tagline />
-			<SliderShow />
+			<SliderBilder />
 			<OpenHours />
 			<GoogleMaps />
 		</>

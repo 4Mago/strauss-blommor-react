@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Container = styled.div`
     opacity: 1; 
-    transform: translateY(-30px);
+    transform: translateY(30px);
     display: flex;
     justify-content: space-around;
     align-items: center;

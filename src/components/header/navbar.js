@@ -34,6 +34,11 @@ const NavContainer = styled.div`
   @media screen and (max-width: 500px) {
   }
 `
+const HeaderContainer = styled.div`
+  display: flex;
+  flex-flow: column;
+`
+
 
 const NavLinks = styled.div`
   display: flex;
@@ -65,7 +70,7 @@ const Header = () => {
   }, [])
 
   return (
-    <header>
+    <HeaderContainer>
       <ImgContainer>
         <Link to="/">
           <img alt="logo" src={urlFor(header.logo).url()} />
@@ -95,7 +100,7 @@ const Header = () => {
             : null}
         </NavLinks>
       </NavContainer>
-    </header>
+    </HeaderContainer>
   )
 }
 
