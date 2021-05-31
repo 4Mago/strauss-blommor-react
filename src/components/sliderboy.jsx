@@ -11,10 +11,17 @@ function urlFor(source) {
   return builder.image(source)
 }
 
+const ContCont = styled.div`
+height: 70vh;
+    width: 100vw;
+    background-color: #273420;
+`
+
 const StyledContainer = styled.div`
     width: 90%;
     height: 50vh;
-    margin: 5% 5% 10% 5%;
+    margin: 0 5% 10% 5%;
+    padding-top: 5%;
     position: relative;
 
     @media screen and (max-width: 800px){
@@ -41,7 +48,7 @@ const SliderCont = styled.div`
 
 const H1 = styled.h1`
 padding-left: 40%;
-
+color: white;
 `
 
 
@@ -61,6 +68,7 @@ const SliderBilder = () => {
       }, [])
 
     return (
+        <ContCont>
         <StyledContainer className="client-container">
             <CarouselProvider className="carousel-desktop"
                 naturalSlideWidth={10}
@@ -87,12 +95,12 @@ const SliderBilder = () => {
                 )})
                 : null}
         </Slider>
-            <ButtonBack  style={{border: '0', opacity: '0.3', position: 'absolute', left: '-55px', top: '45%', borderRadius: '50%', width:'30px', height: '30px'}} ><img style={{width: '15px'}} alt="back" src="./back.svg"/></ButtonBack>
-            <ButtonNext style={{border: '0',opacity: '0.3', position: 'absolute', right: '-55px', top: '45%', borderRadius: '50%', width:'30px', height: '30px'}} ><img style={{width: '15px'}} alt="next" src="./next.svg"/></ButtonNext>
+            <ButtonBack  style={{border: '0', opacity: '0.3', position: 'absolute', left: '-55px', top: '20%', borderRadius: '50%', width:'30px', height: '30px'}} ><img style={{width: '15px', paddingTop: '4px', paddingRight: '3px'}} alt="back" src="./back.svg"/></ButtonBack>
+            <ButtonNext style={{border: '0',opacity: '0.3', position: 'absolute', right: '-55px', top: '22%', borderRadius: '50%', width:'30px', height: '30px'}} ><img style={{width: '15px', paddingTop: '4px', paddingLeft: '3px'}} alt="next" src="./next.svg"/></ButtonNext>
                 </SliderCont>        
         </CarouselProvider>
     </StyledContainer>
-
+    </ContCont>
     )
 }
 

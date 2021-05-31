@@ -13,10 +13,10 @@ import BegravningContextProvider from './store/begravning.context'
 import KontaktContextProvider from './store/kontakt.context'
 import BuketterContextProvider from './store/buketter.context'
 import BrollopContextProvider from './store/brollop.context'
+import styled from 'styled-components'
 
 const App = () => (
-	<div>
-		<ScrollToTop />
+	<ContCont>
 		<Navbar />
 		<Route path={'/'} exact>
 			<HomeContextProvider>
@@ -45,6 +45,11 @@ const App = () => (
 			</KontaktContextProvider>
 		</Route>
 		<Footer />
-	</div>
+		<ScrollToTop />
+	</ContCont>
 )
 export default App
+
+const ContCont = styled.div`
+	background-color: #273420;
+`

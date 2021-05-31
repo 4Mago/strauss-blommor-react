@@ -5,58 +5,9 @@ import sanityClient from "../../Client"
 import imageUrlBuilder from "@sanity/image-url"
 import styled from "styled-components"
 
-const builder = imageUrlBuilder(sanityClient)
-function urlFor(source) {
-  return builder.image(source)
-}
-
-const ImgContainer = styled.div`
-  background: white;
-  margin-top: 19px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
-const NavContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  text-decoration: none;
-
-  @media screen and (max-width: 700px) {
-    width: 100%;
-    padding-right: 8px;
-    padding-left: 8px;
-  }
-
-  @media screen and (max-width: 500px) {
-  }
-`
-const HeaderContainer = styled.div`
-  display: flex;
-  flex-flow: column;
-`
-
-
-const NavLinks = styled.div`
-  display: flex;
-  font-family: "Poppins", sans-serif;
-  font-size: 1em;
-  font-weight: 400;
-  color: black;
-  justify-content: space-between;
-
-  @media screen and (max-width: 700px) {
-  }
-
-  @media screen and (max-width: 500px) {
-  }
-`
-
 const Header = () => {
   const [header, setHeader] = useState("")
+
 
   useEffect(() => {
     const headerQuery = `*[_type == "header"]`
@@ -71,17 +22,18 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <ImgContainer>
+            <ImgContainer>
         <Link to="/">
-          <img alt="logo" src={urlFor(header.logo).url()} />
+          <Img alt="logo" src={urlFor(header.logo).url()} />
         </Link>
       </ImgContainer>
       <NavContainer>
-        <NavLinks>
+        <NavLinks id="sticky">
           {header.menu
             ? header.menu.map((item, id) => {
                 return (
                   <Link
+                    style={{color:'white'}}
                     key={id}
                     className="menu-item"
                     to={`/${item
@@ -105,3 +57,63 @@ const Header = () => {
 }
 
 export default Header
+
+
+const builder = imageUrlBuilder(sanityClient)
+function urlFor(source) {
+  return builder.image(source)
+}
+
+const ImgContainer = styled.div`
+  margin-top: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const Img = styled.img`
+  max-height: 140px;
+`
+
+const NavContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  text-decoration: none;
+  color: white;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  @media screen and (max-width: 500px) {
+  }
+`
+const HeaderContainer = styled.div`
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+`
+
+
+const NavLinks = styled.div`
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: white;
+  justify-content: space-between;
+
+  @media screen and (max-width: 700px) {
+  }
+
+  @media screen and (max-width: 500px) {
+  }
+`

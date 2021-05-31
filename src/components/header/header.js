@@ -4,6 +4,32 @@ import styled from "styled-components"
 import sanityClient from "../../Client"
 import imageUrlBuilder from "@sanity/image-url"
 
+const Header = () => {
+  const { home } = useContext(HomeContext)
+  return (
+    <>
+      <OuterMain>
+        <HeaderImage
+          alt="hero image"
+          className="heroimage"
+          id="heroimage"
+          style={{ backgroundImage: `url(${urlFor(home.heroImage).url()})` }}
+        >
+          <ColorShade />
+          <MainInner>
+            <MiddleText>
+              {home.title}
+              <MiddlePart>{home.description}</MiddlePart>
+            </MiddleText>
+          </MainInner>
+        </HeaderImage>
+      </OuterMain>
+    </>
+  )
+}
+
+export default Header
+
 const builder = imageUrlBuilder(sanityClient)
 function urlFor(source) {
   return builder.image(source)
@@ -14,7 +40,7 @@ const OuterMain = styled.div`
   justify-content: center;
   margin: 0;
   padding: 0;
-  height: 558px;
+  height: 100vh;
   width: 100%;
   left: 0px;
   top: 108px;
@@ -22,10 +48,10 @@ const OuterMain = styled.div`
 `
 
 const HeaderImage = styled.div`
-  width: 70%;
-  background-position: right;
+  width: 100%;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%;
 
   @media screen and (max-width: 500px) {
     background-position: center;
@@ -38,7 +64,20 @@ const HeaderImage = styled.div`
 const MainInner = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 13vh;
+  justify-content: flex-end;
+  width: 40%;
+  height: 100vh;  
+  margin: 5vh;
+`
+
+const ColorShade = styled.div`
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #273420;
+  opacity: 60%;
+  z-index: 10;
 `
 
 const MiddlePart = styled.p`
@@ -63,6 +102,8 @@ const MiddleText = styled.h2`
   text-align: left;
   align-items: left;
   justify-content: flex-start;
+  z-index: 999;
+
 
   @media screen and (max-width: 700px) {
     width: 100%;
@@ -70,28 +111,3 @@ const MiddleText = styled.h2`
     margin: 0;
   }
 `
-
-const Header = () => {
-  const { home } = useContext(HomeContext)
-  return (
-    <>
-      <OuterMain>
-        <HeaderImage
-          alt="hero image"
-          className="heroimage"
-          id="heroimage"
-          style={{ backgroundImage: `url(${urlFor(home.heroImage).url()})` }}
-        >
-          <MainInner>
-            <MiddleText>
-              {home.title}
-              <MiddlePart>{home.description}</MiddlePart>
-            </MiddleText>
-          </MainInner>
-        </HeaderImage>
-      </OuterMain>
-    </>
-  )
-}
-
-export default Header

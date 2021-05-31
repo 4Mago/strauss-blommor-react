@@ -7,11 +7,13 @@ const Container = styled.div`
     align-items: center;
     margin-bottom: 100px;
     padding-top: 100px;
+    background-color: #273420;
 `
 
 const Iframe = styled.iframe`
     width: 100%;
     height: 450px;
+    background-color: #273429;
 `
 
 const GoogleMaps = () => {

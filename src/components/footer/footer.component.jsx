@@ -33,6 +33,7 @@ const MenuLinkOpenhours = styled(Link)`
 
 const Container = styled.div`
   padding-top: 15vh;
+  margin: 0;
   background-color: #273420;
   color: white;
   padding: 50px;
@@ -51,7 +52,6 @@ const Container = styled.div`
 const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 150px;
   text-align: center;
   @media screen and (min-width: 600px) {
     &:nth-child(1) {
@@ -67,12 +67,10 @@ const InfoContainer = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    height: 200px;
   }
 `
 
 const Image = styled.img`
-  height: 50px;
   width: 50px;
   padding: 5px;
   cursor: pointer;

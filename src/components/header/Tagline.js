@@ -11,12 +11,15 @@ const TaglineDiv = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #273421;
 `
 
-const TaglineTitle = styled.h2``
+const TaglineTitle = styled.h2`
+  color: white;
+`
 
 const TaglineText = styled.p`
-  color: black;
+  color: white;
   width: 550px;
 
   @media screen and (max-width: 550px) {

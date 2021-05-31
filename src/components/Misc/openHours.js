@@ -1,37 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Container = styled.div`
-    opacity: 1; 
-    transform: translateY(30px);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: poppins;
-
-    @media screen and (max-width: 700px) {
-        display: flex;
-        flex-direction: column;
-    }
-    `
-
-const ImageContainer = styled.div`
-    display: flex;
-    width: 300px;
-    height: 300px;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    gap: 10px;
-    text-align: center;
-`
-
-const Icon = styled.img`
-    width: 100px;
-    transition: .5s;
-    z-index: 2;
-`
-
 const OpenHours = () => {
     return (
         <Container>
@@ -58,3 +27,37 @@ const OpenHours = () => {
 }
 
 export default OpenHours
+
+
+const Container = styled.div`
+    opacity: 1; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: poppins;
+    background-color: #273420;
+    height: 70vh;
+
+    @media screen and (max-width: 700px) {
+        display: flex;
+        flex-direction: column;
+    }
+    `
+
+const ImageContainer = styled.div`
+    display: flex;
+    width: 300px;
+    height: 300px;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-align: center;
+`
+
+const Icon = styled.img`
+    width: 100px;
+    transition: .5s;
+    z-index: 2;
+`
