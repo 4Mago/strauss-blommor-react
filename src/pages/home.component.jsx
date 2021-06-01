@@ -5,9 +5,10 @@ import styled from 'styled-components'
 import GoogleMaps from '../components/Misc/GoogleMaps'
 import Header from '../components/header/header'
 import Tagline from '../components/header/Tagline'
-import SliderBilder from '../components/sliderboy'
+import SliderBilder from '../components/Misc/sliderboy'
 
 const OuterContainer = styled.div`
+	position: fixed;
 	width: 100%;
 	max-height: 130vh;
 	display: flex;

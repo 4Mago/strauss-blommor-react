@@ -13,12 +13,12 @@ const OpenHours = () => {
         </ImageContainer>
         <ImageContainer>
         <Icon src="/images/henock_inkoner_04.png" alt=""></Icon>
-        <h4 class="page__info--title">Vår Butik </h4>
+        <h4 className="page__info--title">Vår Butik </h4>
         Strauss Blommor ligger på Södermalm i Stockholm <br/> (Södra station uppgång Rosenlundsgatan).
         </ImageContainer>
         <ImageContainer>
         <Icon src="/images/henock_inkoner_02.png" alt=""></Icon>
-        <h4 class="page__info--title">Kontakt</h4>
+        <h4 className="page__info--title">Kontakt</h4>
        <p>Du kan nå oss via <a href='mailto:info@straussblommor.se'>E-post</a><br />
         Eller ringa på <a href='tel:08-209840'>08-20 98 40</a></p>
         </ImageContainer>

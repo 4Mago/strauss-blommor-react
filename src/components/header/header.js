@@ -20,6 +20,7 @@ const Header = () => {
             <MiddleText>
               {home.title}
               <MiddlePart>{home.description}</MiddlePart>
+            <Button>Kontakta oss!</Button>
             </MiddleText>
           </MainInner>
         </HeaderImage>
@@ -48,17 +49,35 @@ const OuterMain = styled.div`
 `
 
 const HeaderImage = styled.div`
+  background-attachment: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
 
-  @media screen and (max-width: 500px) {
-    background-position: center;
-    height: 40%;
-    padding-top: 320px;
-    top: 150px;
+  @media screen and (max-width: 1070px) { 
+    height: 100vh;
+    background-size: cover;
   }
+`
+
+const Button = styled.button`
+    font-weight: 100;
+    color: black;
+    font-size: 1rem;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0 0 10%;
+    border-radius: 2rem;
+    background: #273430;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    padding: 1rem 0.5rem;
+    animation: animate 2s linear infinite;
 `
 
 const MainInner = styled.div`
@@ -68,6 +87,7 @@ const MainInner = styled.div`
   width: 40%;
   height: 100vh;  
   margin: 5vh;
+  z-index: 99;
 `
 
 const ColorShade = styled.div`

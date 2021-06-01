@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
-import sanityClient from '../Client'
+import sanityClient from '../../Client'
 import { CarouselProvider, Slider, ButtonBack, Slide, ButtonNext } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 import imageUrlBuilder from '@sanity/image-url'
+
+
 
 
 const builder = imageUrlBuilder(sanityClient)
