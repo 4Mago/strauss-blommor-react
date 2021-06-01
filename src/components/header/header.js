@@ -18,9 +18,9 @@ const Header = () => {
           <ColorShade />
           <MainInner>
             <MiddleText>
-              {home.title}
+              <MiddlePart2>{home.title}</MiddlePart2>
               <MiddlePart>{home.description}</MiddlePart>
-            <Button>Kontakta oss!</Button>
+              <Button href="/kontakt">Kontakta oss!</Button>
             </MiddleText>
           </MainInner>
         </HeaderImage>
@@ -53,11 +53,21 @@ const HeaderImage = styled.div`
   top: 0;
   left: 0;
   width: 100%;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
 
-  @media screen and (max-width: 1070px) { 
+  @media screen and (max-width: 1400px) and (min-height: 900px)  { 
+    height: 100vh;
+    background-size: cover;
+  }
+  @media screen and (max-width: 1400px) and (min-height: 800px)  { 
+    height: 100vh;
+    background-size: cover;
+  }
+
+  @media screen and (max-width: 1070px)  { 
     height: 100vh;
     background-size: cover;
   }
@@ -67,7 +77,7 @@ const Button = styled.button`
     font-weight: 100;
     color: black;
     font-size: 1rem;
-    width: 40%;
+    width: 11.5rem;
     display: flex;
     justify-content: center;
     margin: 1.5rem 0 0 10%;
@@ -87,7 +97,18 @@ const MainInner = styled.div`
   width: 40%;
   height: 100vh;  
   margin: 5vh;
-  z-index: 99;
+  z-index: 99;	  
+
+  @media screen and (min-width: 1100px) {
+    display: flex;
+  text-align: center;
+  align-items: center;
+  width: 1100px;;
+  }
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    margin: 0;
+  }
 `
 
 const ColorShade = styled.div`
@@ -100,7 +121,7 @@ const ColorShade = styled.div`
   z-index: 10;
 `
 
-const MiddlePart = styled.p`
+const MiddlePart = styled.div`
   color: white;
   display: flex;
   text-align: left;
@@ -109,9 +130,30 @@ const MiddlePart = styled.p`
   width: 350px;
   margin-top: 15px;
 
+
   @media screen and (max-width: 500px) {
     width: 100%;
-    text-align: center;
+  }
+`
+
+const MiddlePart2 = styled.p`
+  color: white;
+  display: flex;
+  text-align: left;
+  align-items: left;
+  font-size: 36px;
+  width: 350px;
+  margin-top: 15px;
+
+  @media screen and (min-width: 1100px) {
+    width: 80%;
+    font-size: 56px;
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
   }
 `
 
@@ -119,15 +161,19 @@ const MiddleText = styled.h2`
   color: white;
   display: flex;
   flex-flow: column;
-  text-align: left;
+  text-align: center;
   align-items: left;
-  justify-content: flex-start;
+  justify-content: center;
   z-index: 999;
 
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 900px) {
     width: 100%;
-    text-align: center;
-    margin: 0;
+    margin-left: 12%;
+  }
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    margin-left: 0;
+
   }
 `

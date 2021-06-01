@@ -21,19 +21,20 @@ const Header = () => {
   }, [])
 
   return (
-    <HeaderContainer>
-            <ImgContainer>
-        <Link to="/">
-          <Img alt="logo" src={urlFor(header.logo).url()} />
-        </Link>
-      </ImgContainer>
-      <NavContainer>
-        <NavLinks id="sticky">
-          {header.menu
-            ? header.menu.map((item, id) => {
+    <ContCont>
+      <HeaderContainer>
+        <ImgContainer>
+          <Link to="/">
+            <Img alt="logo" src={urlFor(header.logo).url()} />
+          </Link>
+        </ImgContainer>
+        <NavContainer id="sticky">
+          <NavLinks>
+            {header.menu
+              ? header.menu.map((item, id) => {
                 return (
                   <Link
-                    style={{color:'white'}}
+                    style={{ color: 'white' }}
                     key={id}
                     className="menu-item"
                     to={`/${item
@@ -49,10 +50,11 @@ const Header = () => {
                   </Link>
                 )
               })
-            : null}
-        </NavLinks>
-      </NavContainer>
-    </HeaderContainer>
+              : null}
+          </NavLinks>
+        </NavContainer>
+      </HeaderContainer>
+    </ContCont>
   )
 }
 
@@ -65,14 +67,19 @@ function urlFor(source) {
 }
 
 const ImgContainer = styled.div`
-  margin-top: 220px;
+  margin-top: 230px;
   display: flex;
   justify-content: center;
   align-items: center;
 `
 
 const Img = styled.img`
-  max-height: 140px;
+  max-height: 145px;
+`
+
+const ContCont = styled.div`
+  width: 100%;
+  position: relative;
 `
 
 const NavContainer = styled.div`
@@ -111,7 +118,7 @@ const NavLinks = styled.div`
   color: white;
   justify-content: space-between;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (min-width: 700px) {
   }
 
   @media screen and (max-width: 500px) {

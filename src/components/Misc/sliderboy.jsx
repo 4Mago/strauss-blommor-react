@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import sanityClient from '../../Client'
 import { CarouselProvider, Slider, ButtonBack, Slide, ButtonNext } from 'pure-react-carousel'
@@ -10,12 +10,12 @@ import imageUrlBuilder from '@sanity/image-url'
 
 const builder = imageUrlBuilder(sanityClient)
 function urlFor(source) {
-  return builder.image(source)
+    return builder.image(source)
 }
 
 const ContCont = styled.div`
 height: 70vh;
-    width: 100vw;
+    width: 100%;
     background-color: #273420;
 `
 
@@ -60,49 +60,50 @@ const SliderBilder = () => {
         const sliderBilderQuery = `*[_type == "sliderbilder"]`
         const sliderBilderArray = []
         sanityClient.fetch(sliderBilderQuery).then(sliderBilder => {
-            
-          sliderBilder.forEach(sliderBilder => {
-              sliderBilderArray.push(sliderBilder)
-          })
-          setSliderBilder(sliderBilderArray)
+
+            sliderBilder.forEach(sliderBilder => {
+                sliderBilderArray.push(sliderBilder)
+            })
+            setSliderBilder(sliderBilderArray)
         })
         return
-      }, [])
+    }, [])
 
     return (
         <ContCont>
-        <StyledContainer className="client-container">
-            <CarouselProvider className="carousel-desktop"
-                naturalSlideWidth={10}
-                naturalSlideHeight={1000}
-                totalSlides={sliderBilder.length}
-                visibleSlides={4}
-                infinite={true}
-                step={3}
-            >
-                <SliderCont style={{height: '1000px'}}>
+            <StyledContainer className="client-container">
+                <CarouselProvider className="carousel-desktop"
+                    naturalSlideWidth={10}
+                    naturalSlideHeight={1000}
+                    totalSlides={sliderBilder.length}
+                    visibleSlides={4}
+                    infinite={true}
+                    step={3}
+                >
+                    <SliderCont style={{ height: '1000px' }}>
                         <H1>Bli inspirerad</H1>
-                <Slider style={{height: '1000px'}}>
-                    {sliderBilder.length > 0 ? 
-                    sliderBilder.map((item, index) => {
-                      return (
-                        <Slide >
-                          <a href='https://instagram.com/straussblommor'>
-                      <SliderBilderLogo 
-                      key={index}
-                      src={urlFor(item.image1).url()}
-                      />
-                      </a>
-                </Slide>
-                )})
-                : null}
-        </Slider>
-            <ButtonBack  style={{border: '0', opacity: '0.3', position: 'absolute', left: '-55px', top: '20%', borderRadius: '50%', width:'30px', height: '30px'}} ><img style={{width: '15px', paddingTop: '4px', paddingRight: '3px'}} alt="back" src="./back.svg"/></ButtonBack>
-            <ButtonNext style={{border: '0',opacity: '0.3', position: 'absolute', right: '-55px', top: '22%', borderRadius: '50%', width:'30px', height: '30px'}} ><img style={{width: '15px', paddingTop: '4px', paddingLeft: '3px'}} alt="next" src="./next.svg"/></ButtonNext>
-                </SliderCont>        
-        </CarouselProvider>
-    </StyledContainer>
-    </ContCont>
+                        <Slider style={{ height: '1000px' }}>
+                            {sliderBilder.length > 0 ?
+                                sliderBilder.map((item, index) => {
+                                    return (
+                                        <Slide >
+                                            <a href='https://instagram.com/straussblommor'>
+                                                <SliderBilderLogo
+                                                    key={index}
+                                                    src={urlFor(item.image1).url()}
+                                                />
+                                            </a>
+                                        </Slide>
+                                    )
+                                })
+                                : null}
+                        </Slider>
+                        <ButtonBack style={{ border: '0', opacity: '0.3', position: 'absolute', left: '-55px', top: '20%', borderRadius: '50%', width: '30px', height: '30px' }} ><img style={{ width: '15px', paddingTop: '4px', paddingRight: '3px' }} alt="back" src="./back.svg" /></ButtonBack>
+                        <ButtonNext style={{ border: '0', opacity: '0.3', position: 'absolute', right: '-55px', top: '22%', borderRadius: '50%', width: '30px', height: '30px' }} ><img style={{ width: '15px', paddingTop: '4px', paddingLeft: '3px' }} alt="next" src="./next.svg" /></ButtonNext>
+                    </SliderCont>
+                </CarouselProvider>
+            </StyledContainer>
+        </ContCont>
     )
 }
 
