@@ -120,7 +120,7 @@ const settings = {
                 <>
             <HeaderImage>
               <Thumbnail 
-                style={{ backgroundImage: `url(${urlFor(brollopItem.image).quality(80).auto('format').url()})` }}
+                style={{ backgroundImage: `url(${urlFor(brollopItem.heroImage).quality(80).auto('format').url()})` }}
                 key={idx}
                 slider={brollopItem}
               />
@@ -134,7 +134,18 @@ const settings = {
     </HomeContainer>
 
 <NewCont>
-<h1>Hello</h1>
+  <Cont>
+  <Thumbnail 
+    style={{ backgroundImage: `url(${urlFor(brollop.image).quality(80).auto('format').url()})` }}
+    key={idx}
+    slider={brollopItem}
+              />
+  <TextCont>
+    <Title>
+      {brollop.description}
+    </Title>
+  </TextCont>
+  </Cont>
 </NewCont>
     </ContCont>
 )
