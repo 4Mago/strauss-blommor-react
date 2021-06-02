@@ -15,10 +15,6 @@ const OuterContainer = styled.div`
 	align-items: center;
 `
 
-const HeaderCont = styled.div`
-width: 100%;
-`
-
 const Home = () => {
 	// Keep to connect to sanity comment to remove warning import {useContext} from React
 	return (

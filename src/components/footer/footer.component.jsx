@@ -32,11 +32,11 @@ const MenuLinkOpenhours = styled(Link)`
 `
 
 const Container = styled.div`
-  padding-top: 15vh;
   margin: 0;
   background-color: #273420;
   color: white;
   padding: 50px;
+  padding-top: 5vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
@@ -183,6 +183,7 @@ const Footer = () => {
               : null}
           </InfoText>
         </InfoContainer>
+
       </Container>
     </>
   )
