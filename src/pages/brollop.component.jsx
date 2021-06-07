@@ -4,6 +4,7 @@ import imageUrlBuilder from "@sanity/image-url"
 import sanityClient from "../Client"
 import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import BrollopCont from "../components/bröllop/brollopCont"
 
 
 const builder = imageUrlBuilder(sanityClient)
@@ -42,14 +43,17 @@ const Title = styled.p`
 
 const HomeContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   @media screen and (max-width: 700px) {
     padding-bottom: 0;
   }
   .carousel.carousel-slider  {
-    height: 100vh;
-    
+    height: 100%;
     }
+
+  .carousel{
+    height: 0;
+  }
 `
 
 const HeaderImage = styled.div`
@@ -108,9 +112,11 @@ const settings = {
     infiniteLoop: true,
     showStatus: false,
     transitionTime: 1000,
+    stopOnHover: false,
   }
 
   return (
+    <>
     <ContCont>
     <HomeContainer id="Home">
     {brollop.length > 0 ? (
@@ -132,27 +138,10 @@ const settings = {
     )
     : null }
     </HomeContainer>
-
-<NewCont>
-  <Cont>
-  <Thumbnail 
-    style={{ backgroundImage: `url(${urlFor(brollop.image).quality(80).auto('format').url()})` }}
-    key={idx}
-    slider={brollopItem}
-              />
-  <TextCont>
-    <Title>
-      {brollop.description}
-    </Title>
-  </TextCont>
-  </Cont>
-</NewCont>
+    <BrollopCont />
     </ContCont>
-)
+    </>
+  )
 }
 
 export default Brollop
-
-const NewCont = styled.div`
-  height: 100vh;
-`

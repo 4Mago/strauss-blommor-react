@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import sanityClient from '../Client'
+import sanityClient from '../../Client'
 import styled from 'styled-components'
 import imageUrlBuilder from '@sanity/image-url'
 
@@ -116,6 +116,7 @@ const Sliderboy = () => {
         infiniteLoop: true,
         showStatus: false,
         transitionTime: 1000,
+        stopOnHover: false,
       }
       
       return (

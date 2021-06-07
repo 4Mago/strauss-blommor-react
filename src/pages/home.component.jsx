@@ -16,7 +16,6 @@ const OuterContainer = styled.div`
 `
 
 const Home = () => {
-	// Keep to connect to sanity comment to remove warning import {useContext} from React
 	return (
 		<>
 			<OuterContainer>

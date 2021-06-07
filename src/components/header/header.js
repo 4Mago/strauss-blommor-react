@@ -20,8 +20,10 @@ const Header = () => {
             <MiddleText>
               <MiddlePart2>{home.title}</MiddlePart2>
               <MiddlePart>{home.description}</MiddlePart>
-              <Button href="/kontakt">Kontakta oss!</Button>
             </MiddleText>
+            <MiddlePart>
+              <Button href="/kontakt">Kontakta oss!</Button>
+            </MiddlePart>
           </MainInner>
         </HeaderImage>
       </OuterMain>
@@ -39,6 +41,7 @@ function urlFor(source) {
 const OuterMain = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -93,9 +96,9 @@ const Button = styled.button`
 const MainInner = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  width: 40%;
-  height: 100vh;  
+  justify-content: center;
+  width: 80%;
+  height: 100%;
   margin: 5vh;
   z-index: 99;	  
 
@@ -103,11 +106,16 @@ const MainInner = styled.div`
     display: flex;
   text-align: center;
   align-items: center;
-  width: 1100px;;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15%;  
   }
   @media screen and (max-width: 700px) {
     width: 100%;
     margin: 0;
+    flex-flow: column;
+    padding: 0;
   }
 `
 
@@ -129,6 +137,7 @@ const MiddlePart = styled.div`
   font-size: 18px;
   width: 350px;
   margin-top: 15px;
+  z-index: 999;
 
 
   @media screen and (max-width: 500px) {
@@ -136,7 +145,7 @@ const MiddlePart = styled.div`
   }
 `
 
-const MiddlePart2 = styled.p`
+const MiddlePart2 = styled.h2`
   color: white;
   display: flex;
   text-align: left;
@@ -144,9 +153,10 @@ const MiddlePart2 = styled.p`
   font-size: 36px;
   width: 350px;
   margin-top: 15px;
+  z-index: 999;
 
   @media screen and (min-width: 1100px) {
-    width: 80%;
+    width: 75%;
     font-size: 56px;
   }
   @media screen and (max-width: 500px) {
@@ -157,7 +167,7 @@ const MiddlePart2 = styled.p`
   }
 `
 
-const MiddleText = styled.h2`
+const MiddleText = styled.div`
   color: white;
   display: flex;
   flex-flow: column;
