@@ -3,18 +3,18 @@ import { HomeContext } from "../../store/home-context.component"
 import styled from "styled-components"
 import sanityClient from "../../Client"
 import imageUrlBuilder from "@sanity/image-url"
+import {Link} from 'react-router-dom'
 
 const Header = () => {
   const { home } = useContext(HomeContext)
   return (
-    <>
       <OuterMain>
         <HeaderImage
           alt="hero image"
           className="heroimage"
           id="heroimage"
           style={{ backgroundImage: `url(${urlFor(home.heroImage).url()})` }}
-        >
+        />
           <ColorShade />
           <MainInner>
             <MiddleText>
@@ -22,12 +22,10 @@ const Header = () => {
               <MiddlePart>{home.description}</MiddlePart>
             </MiddleText>
             <MiddlePart>
-              <Button href="/kontakt">Kontakta oss!</Button>
+              <Link to='/kontakt' style={{textDecoration: 'none'}}><Button>Kontakta oss!</Button></Link>
             </MiddlePart>
           </MainInner>
-        </HeaderImage>
       </OuterMain>
-    </>
   )
 }
 
@@ -47,11 +45,12 @@ const OuterMain = styled.div`
   height: 100vh;
   width: 100%;
   left: 0px;
-  top: 108px;
+  padding-top: 108px;
   background-color: #273420;
 `
 
 const HeaderImage = styled.div`
+  position: absolute;
   background-attachment: fixed;
   top: 0;
   left: 0;
@@ -157,6 +156,7 @@ const MiddlePart2 = styled.h2`
 
   @media screen and (min-width: 1100px) {
     width: 75%;
+    min-width: 492px;
     font-size: 56px;
   }
   @media screen and (max-width: 500px) {
@@ -164,6 +164,7 @@ const MiddlePart2 = styled.h2`
   }
   @media screen and (max-width: 500px) {
     width: 100%;
+    max-width: 350px;
   }
 `
 
